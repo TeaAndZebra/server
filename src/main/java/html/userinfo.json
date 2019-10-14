@@ -1,0 +1,314 @@
+{"site":
+[{
+	"ipAdd": {
+		"address": "",
+		"port": 46
+	},
+	"pdpSocket": {
+		"pdpPort": 0,
+		"pdpAdd": 666
+	},
+	"ctx": {
+		"removed": false
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 03:42:20",
+	"state": -1,
+	"logInTime": "2019-09-29 :03:42:01first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "117.23.83.147",
+		"port": 8128
+	},
+	"pdpSocket": {
+		"pdpPort": 0,
+		"pdpAdd": 192398188
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-30 10:26:16",
+	"state": -1,
+	"logInTime": "2019-09-30 :10:26:06first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "1.86.62.202",
+		"port": 24170
+	},
+	"pdpSocket": {
+		"pdpPort": 1,
+		"pdpAdd": 699885870
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 890436,
+	"numOfDatagram": 924,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 03:42:21",
+	"state": -1,
+	"logInTime": "2019-09-29 :03:42:01first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "117.23.81.29",
+		"port": 7842
+	},
+	"pdpSocket": {
+		"pdpPort": 1,
+		"pdpAdd": 696339164
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 06:06:02",
+	"state": -1,
+	"logInTime": "2019-09-29 :06:05:40first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "117.23.81.29",
+		"port": 7847
+	},
+	"pdpSocket": {
+		"pdpPort": 0,
+		"pdpAdd": 696339164
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 06:06:46",
+	"state": -1,
+	"logInTime": "2019-09-29 :06:06:05first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "123.138.115.42",
+		"port": 29492
+	},
+	"pdpSocket": {
+		"pdpPort": 2,
+		"pdpAdd": 699885870
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 316728,
+	"numOfDatagram": 337,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 03:42:21",
+	"state": -1,
+	"logInTime": "2019-09-29 :03:42:01first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "123.138.115.41",
+		"port": 41389
+	},
+	"pdpSocket": {
+		"pdpPort": 3,
+		"pdpAdd": 671225971
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 2344400,
+	"numOfDatagram": 1810,
+	"ipPort": 5467,
+	"speedOfDatagram": 67526,
+	"logOffTime": "2019-09-29 05:44:11",
+	"state": -1,
+	"logInTime": "2019-09-29 :05:43:45first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 80240
+}, {
+	"ipAdd": {
+		"address": "117.136.87.46",
+		"port": 59388
+	},
+	"pdpSocket": {
+		"pdpPort": 2,
+		"pdpAdd": 671225971
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 2487560,
+	"numOfDatagram": 1913,
+	"ipPort": 5467,
+	"speedOfDatagram": 346446,
+	"logOffTime": "2019-09-29 06:06:18",
+	"state": -1,
+	"logInTime": "2019-09-29 :06:06:08first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 408880
+}, {
+	"ipAdd": {
+		"address": "36.45.20.124",
+		"port": 38829
+	},
+	"pdpSocket": {
+		"pdpPort": 1,
+		"pdpAdd": 671225971
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 20491760,
+	"numOfDatagram": 15758,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 06:06:45",
+	"state": -1,
+	"logInTime": "2019-09-29 :06:06:08first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "123.138.115.44",
+		"port": 60920
+	},
+	"pdpSocket": {
+		"pdpPort": 3,
+		"pdpAdd": 696339164
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 04:47:20",
+	"state": -1,
+	"logInTime": "2019-09-29 :04:47:07first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}, {
+	"ipAdd": {
+		"address": "117.136.87.46",
+		"port": 59386
+	},
+	"pdpSocket": {
+		"pdpPort": 0,
+		"pdpAdd": 671225971
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 4189320,
+	"numOfDatagram": 3221,
+	"ipPort": 5467,
+	"speedOfDatagram": 298506,
+	"logOffTime": "2019-09-29 06:06:18",
+	"state": -1,
+	"logInTime": "2019-09-29 :06:06:08first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 2398280
+}, {
+	"ipAdd": {
+		"address": "1.86.57.193",
+		"port": 51645
+	},
+	"pdpSocket": {
+		"pdpPort": 2,
+		"pdpAdd": 696339164
+	},
+	"ctx": {
+		"$ref": "$[0].ctx"
+	},
+	"active": false,
+	"bitsOfDatagram": 0,
+	"numOfDatagram": 0,
+	"ipPort": 5467,
+	"speedOfDatagram": 0,
+	"logOffTime": "2019-09-29 04:47:20",
+	"state": -1,
+	"logInTime": "2019-09-29 :04:47:07first register",
+	"calSpeedFuture": {
+		"periodic": true,
+		"cancelled": true,
+		"done": true
+	},
+	"testOfSpeed": 0
+}]}

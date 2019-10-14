@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+.profile th{
+    font-family: 微软雅黑;
+    font-size: 16px;
+    font-weight: bold;
+    color: #255e95;
+    background-color:#e9faff;
+    width: fit-content;
+    padding: 10px;
+}
+table{
+    /*只有定义了表格的布局算法为fixed，下面td的定义才能起作用。*/
+    table-layout: auto;
+}
+table td
+{width: fit-content ;word-break: keep-all;white-space:nowrap;padding: 10px;}

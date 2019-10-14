@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8" />
+<!--    http-equiv="refresh" content="1"-->
+    <title>MODEL PAGE</title>
+    <style>@import "log.css";</style>
+    <style type="text/css">
+        html,body{
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script>
+        $(function ins() {
+            // setRow();
+            getJson();
+            function getJson() {
+                var tblRow ;
+
+                $.getJSON('userinfo.json', function (data) {
+                    $.each(data.site, function (i, f) {
+                        tblRow = tblRow + "<tr>" + "<td style='text-align:center' >" + f.ipAdd.address + ":" + f.ipAdd.port + "</td>" +
+                            "<td style='text-align:center' >" + f.active + "</td>" +
+                            "<td style='text-align:center'>" + f.pdpSocket.pdpAdd +
+                            "<td style='text-align:center' >" + f.pdpSocket.pdpPort + "</td>" +
+                            "<td style='text-align:center'>" + f.speedOfDatagram / 1000 + "</td>" +
+                            "<td style='text-align:center'>" + f.bitsOfDatagram / 1000 + "</td>" +
+                            "<td style='text-align:center'>" + f.logOffTime + "</td>" +
+                            "<td style='text-align:center'>" + f.logInTime+Math.random().toFixed(2) + "</td>" + "</tr>";
+                    });
+                     // $(tblRow).re("#userdata tbody");
+                     $("#userdata tbody").html(tblRow);
+                     // delete $(tblRow);
+                });
+            }
+            setInterval(function () {
+                     getJson();
+                    // $("#userdata tbody").replaceWith($(tb1Row));
+                }, 5000)
+            });
+        // function setRow(){
+        //     var tabRow = "<tr>"+"<td>"+ "the line one"+"</td>"+"<td>"+ "the line one"+"</td>"+ "</tr>";
+        //     $(tabRow).appendTo("#userdata tbody");
+        //     var papr = document.getElementById("userdata");
+        //     // window.alert(papr.attributes[1].name);
+        //     papr.style.color = 'blue';
+        //     papr.style.height = '200px';
+        //     // window.alert($(tabRow));
+        // }
+    </script>
+</head>
+
+<body >
+<div class="wrapper">
+    <div class="profile">
+        <table id= "userdata"  border="0" bgcolor="#cccccc" cellspacing="1" cellpadding="0" align="center"  >
+
+            <thead>
+            <br>
+            <br>
+            <th height="80">ipAdd</th>
+            <th >active </th>
+            <th >pdpAdd</th>
+            <th >pdpPort</th>
+            <th id="speed" >速率 kb/s</th>
+            <th >总流量 kb</th>
+            <th >logOffTime</th>
+            <th >logInTime</th>
+            </thead>
+            <tbody >
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
