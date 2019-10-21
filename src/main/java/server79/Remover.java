@@ -12,13 +12,14 @@ public class Remover implements Runnable {
     }
     @Override
     public void run() {
-        if (SharedTranMap.pdpPortMap.containsValue(pdp.getPdpSocket().getPdpAdd(), pdp.getPdpSocket().getPdpPort())) {
-
+        if (SharedTranMap.pdpSocketPdpMap.containsValue(pdp)) {
+                System.out.println( pdp.getPdpSocket().getPdpAdd()+" :  "+pdp.getPdpSocket().getPdpPort()+" is removed");
                 SharedTranMap.pdpPortMap.remove(pdp.getPdpSocket().getPdpAdd(), pdp.getPdpSocket().getPdpPort());
+                SharedTranMap.pdpSocketPdpMap.remove(pdp.getPdpSocket(), pdp);
+                SharedTranMap.regImplWithObject.remove(pdp);
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 dateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
                 pdp.getTimer().cancel(false);
-             //   pdp.setState(-1);
                 pdp.setLogOffTime(dateFormat.format(new Date()));
                 pdp.getCalSpeedFuture().cancel(false);
 

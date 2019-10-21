@@ -146,7 +146,7 @@ public class Pdp {
         if (getClass() != obj.getClass())
             return false;
         Pdp other = (Pdp) obj;
-        if (pdpSocket.equals(other.pdpSocket) )
+        if (!pdpSocket.equals(other.pdpSocket) )
             return false;
         return true;
 

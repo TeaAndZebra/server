@@ -11,13 +11,8 @@ import java.util.Map;
 class Dev {
    String getInfo() {
        JSONArray array = new JSONArray();
-       for (Map.Entry<PdpSocket,Pdp> entry :SharedTranMap.objectWithSocket.entrySet()){
+       for (Map.Entry<PdpSocket,Pdp> entry :SharedTranMap.pdpSocketPdpMap.entrySet()){
            Pdp pdp = entry.getValue();
-           if(SharedTranMap.pdpPortMap.containsValue(pdp.getPdpSocket().getPdpAdd(), pdp.getPdpSocket().getPdpPort())){
-               pdp.setActive(true);
-           }else {
-               pdp.setActive(false);
-           }
            array.add(pdp);
        }
 

@@ -10,19 +10,33 @@ public class RegImpl implements Reg {
     RegImpl(int port){
         this.port = port;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        RegImpl other = (RegImpl)obj;
+        if (port!=other.port)
+            return false;
+        return true;
 
+    }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + port;
+        return result;
+    }
     /**普通路由：Type = 0x00用户发送0x55	0x00	源地址（40bit）	目的地址（40bit）	用户数据*/
     @Override
-    public void sinRoute(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+    public void sinRoute(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
         msg.retain();
         ByteBuf buf =msg.content();
         int rBytesOfBuf= buf.readableBytes();
-        byte[] pdpAddByte = new byte[4];
-        buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
-        byte pdpPort =buf.getByte(6);
-        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = SharedTranMap.objectWithSocket.get(pdpSocket);
         RegHandler regHandler = null;
         switch (port){
             case 5467:
@@ -54,31 +68,25 @@ public class RegImpl implements Reg {
             desPort = buf.getByte(11);
             int pdpSocketIntDes = DataChange.bytes2Int(desAddByte);
             //
+          //  System.out.println("single cast dest pdp "+pdpSocketIntDes);
             PdpSocket pdpSocketDes = new PdpSocket(pdpSocketIntDes, desPort);
-            if (SharedTranMap.pdpPortMap.containsValue(pdpSocketIntDes, desPort)) {
-                System.out.println(pdpAddInt+  " singleCast desAdd is : "+pdpSocketIntDes+" port is： "+desPort);
-                Pdp dest = SharedTranMap.objectWithSocket.get(pdpSocketDes);
+            if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocketDes)) {
+                //System.out.println(pdp.getPdpSocket()+  " singleCast desAdd is : "+pdpSocketIntDes+" port is： "+desPort);
+                Pdp dest = SharedTranMap.pdpSocketPdpMap.get(pdpSocketDes);
                 dest.getCtx().writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), dest.getIpAdd()));
             }
         }else {
-            System.out.println(pdpAddInt+  " singleCast " +" ipPort is "+port +" fail");
+            System.out.println(pdp+  " singleCast " +" ipPort is "+port +" fail");
 
         }
     }
     /**多播路由：Type = 0x01
      *用户发送0x55	0x01	源地址（40bit）	目的地址数（8bit）	目的地址0（40bit）	目的地址……（40bit）用户数据*/
     @Override
-    public void multiRoute(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+    public void multiRoute(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
         msg.retain();
         ByteBuf buf =msg.content();
-        long rBytesOfBuf= buf.readableBytes();
-        byte[] pdpAddByte = new byte[4];
-        buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
-        byte pdpPort =buf.getByte(6);
-        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = SharedTranMap.objectWithSocket.get(pdpSocket);
-
+        int rBytesOfBuf= buf.readableBytes();
         RegHandler regHandler = null;
         switch (port){
             case 5467:
@@ -92,7 +100,7 @@ public class RegImpl implements Reg {
                 break;
         }
         if(regHandler!=null&&pdp!=null) {
-            System.out.println(pdpAddInt + " multiCast");
+            System.out.println(pdp.getPdpSocket() + " multiCast");
 
             byte numOfDesAdd = buf.getByte(7);
             System.out.println("multicast:  num is:" + numOfDesAdd);
@@ -116,9 +124,9 @@ public class RegImpl implements Reg {
                 int pdpSocketIntDes = DataChange.bytes2Int(dest);
                 // System.out.println("multicast: "+" pdpAdd:"+DataChange.bytes2Int(dest)+"port:"+destPort);
                 PdpSocket pdpSocketDes = new PdpSocket(pdpSocketIntDes, destPort);
-                if (SharedTranMap.pdpPortMap.containsValue(pdpSocketIntDes, destPort)) {
-                    System.out.println(pdpAddInt+  " multiCast desAdd is "+pdpSocketIntDes+" port is"+destPort);
-                    Pdp pdpDest = SharedTranMap.objectWithSocket.get(pdpSocketDes);
+                if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocketDes)) {
+                   // System.out.println(pdp.getPdpSocket()+  " multiCast desAdd is "+pdpSocketIntDes+" port is"+destPort);
+                    Pdp pdpDest = SharedTranMap.pdpSocketPdpMap.get(pdpSocketDes);
                     pdpDest.getCtx().writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), pdpDest.getIpAdd()));
                 }
             }
@@ -129,6 +137,7 @@ public class RegImpl implements Reg {
      *服务器返回0x55 0x03	源地址（40bit）	用户数据*/
     @Override
     public void reflect(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+        System.out.println("reflect");
         msg.retain();
         ByteBuf buf =  msg.content();
         ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), msg.sender()));
@@ -137,17 +146,8 @@ public class RegImpl implements Reg {
     *用户发送0x55	0x07	源地址（40bit）
     *服务器返回0x55	0x07	速率（64bit）*/
     @Override
-    public void getSpeedOfUser(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
-        msg.retain();
-        ByteBuf buf =msg.content();
-        byte[] pdpAddByte = new byte[4];
-        buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
-        byte pdpPort =buf.getByte(6);
-        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = SharedTranMap.objectWithSocket.get(pdpSocket);
+    public void getSpeedOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
             System.out.println(  "get  speed");
-            //  System.out.println(obj+"获取路由速率bit/s:"+obj.getSpeedOfDatagram());
             byte[] echo = new byte[10];
             echo[0] = (byte) 0x55;
             echo[1] = (byte) 0x06;
@@ -162,20 +162,12 @@ public class RegImpl implements Reg {
      *用户发送0x55	0x06	源地址（40bit）
      *服务器返回0x55	0x06	数据量（64bit）*/
     @Override
-    public void getBitsOfUser(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+    public void getBitsOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
 // System.out.println(obj+"获取路由报文数据量byte:"+obj.getBitsOfDatagram());
-        msg.retain();
-        ByteBuf buf =msg.content();
-        byte[] pdpAddByte = new byte[4];
-        buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
-        byte pdpPort =buf.getByte(6);
-        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = SharedTranMap.objectWithSocket.get(pdpSocket);
             byte[] echo = new byte[10];
             echo[0] = (byte) 0x55;
             echo[1] = (byte) 0x05;
-            System.out.println(pdpAddInt + "get  bits");
+           // System.out.println(pdp.getPdpSocket() + "get  bits");
             byte[] bitsOfDatagram = DataChange.longToBytes(pdp.getBitsOfDatagram());
             if (bitsOfDatagram.length == 8) {
                 System.arraycopy(bitsOfDatagram, 0, echo, 2, 8);
@@ -186,16 +178,7 @@ public class RegImpl implements Reg {
      *用户发送 0x55	0x05	源地址（40bit）
      *服务器返回   0x55	0x05	计数值（64bit）*/
     @Override
-    public void getNumOfUser(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
-        msg.retain();
-        ByteBuf buf =msg.content();
-        byte[] pdpAddByte = new byte[4];
-        buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
-        byte pdpPort =buf.getByte(6);
-        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = SharedTranMap.objectWithSocket.get(pdpSocket);
-        System.out.println(pdpAddInt+  "get  num");
+    public void getNumOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
         System.out.println(pdp + "get num"+pdp.getNumOfDatagram());
         //  System.out.println(obj + "获取路由报文数:"+obj.getNumOfDatagram());
             byte[] echo = new byte[10];

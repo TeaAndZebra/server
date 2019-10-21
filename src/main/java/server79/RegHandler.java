@@ -1,12 +1,10 @@
 package server79;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 
-import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -17,9 +15,9 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
     }
-    private int port;
-    RegHandler(int port){
-        this.port = port;
+    private int ipPort;
+    RegHandler(int ipPort){
+        this.ipPort = ipPort;
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(1);
         service.scheduleAtFixedRate(new calSpeed(),0,6,TimeUnit.SECONDS);
     }
@@ -76,34 +74,42 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 
         byte[] pdpAddByte = new byte[4];
         buf.getBytes(2,pdpAddByte,0,4);
-        int pdpAddInt =   DataChange.bytes2Int(pdpAddByte);
+        int pdpAddInt =  DataChange.bytes2Int(pdpAddByte);
 
         byte pdpPort =  buf.getByte(6);
-        if(SharedTranMap.pdpPortMap.containsValue(pdpAddInt, pdpPort)) {
+        PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
+        Pdp pdp = new Pdp(pdpSocket);
+        if(SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
+            //System.out.println("success  " +buf.getByte(0)+"  "+buf.getByte(1));
             if(fByte==(byte)0x55){
-               RegImpl reg = new RegImpl(port);//注册时在map中存入对象及该用户RegImpl
-                switch (sByte) {
-                    case (byte) 0x00:
-                        reg.sinRoute(ctx, msg);
-                        break;
-                    case (byte) 0x01:
-                        reg.multiRoute(ctx, msg);
-                        break;
-                    case (byte) 0x03:
-                        reg.reflect(ctx, msg);
-                        break;
-                    case (byte) 0x04:
-                        reg.getNumOfUser(ctx, msg);
-                        break;
-                    case (byte) 0x05:
-                        reg.getBitsOfUser(ctx, msg);
-                        break;
-                    case (byte) 0x06:
-                        reg.getSpeedOfUser(ctx, msg);
-                        break;
+                RegImpl reg = SharedTranMap.regImplWithObject.get(pdp);
+             //   System.out.println("reg is  "+reg);
+               //注册时在map中存入对象及该用户RegImpl
+                if(reg!=null) {
+                    switch (sByte) {
+                        case (byte) 0x00:
+                            reg.sinRoute(ctx, msg, pdp);
+                            break;
+                        case (byte) 0x01:
+                            reg.multiRoute(ctx, msg, pdp);
+                            break;
+                        case (byte) 0x03:
+                            reg.reflect(ctx, msg);
+                            break;
+                        case (byte) 0x04:
+                            reg.getNumOfUser(ctx, msg,pdp);
+                            break;
+                        case (byte) 0x05:
+                            reg.getBitsOfUser(ctx, msg,pdp);
+                            break;
+                        case (byte) 0x06:
+                            reg.getSpeedOfUser(ctx, msg,pdp);
+                            break;
+                    }
                 }
-                reg = null;
             }
+        }else {
+            System.out.println("fail "+Integer.toHexString(buf.getByte(0))+"  "+Integer.toHexString(buf.getByte(1)));
         }
     }
 }

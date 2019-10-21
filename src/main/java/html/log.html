@@ -19,7 +19,7 @@
 
                 $.getJSON('userinfo.json', function (data) {
                     $.each(data.site, function (i, f) {
-                        tblRow = tblRow + "<tr>" + "<td style='text-align:center' >" + f.ipAdd.address + ":" + f.ipAdd.port + "</td>" +
+                        tblRow = tblRow + "<tr>" + "<td style='text-align:center' >" + f.ipAdd.address + ":" + f.ipAdd.ipPort + "</td>" +
                             "<td style='text-align:center' >" + f.active + "</td>" +
                             "<td style='text-align:center'>" + f.pdpSocket.pdpAdd +
                             "<td style='text-align:center' >" + f.pdpSocket.pdpPort + "</td>" +
