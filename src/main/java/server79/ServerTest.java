@@ -6,6 +6,12 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
+import redis.clients.jedis.Jedis;
+import redisSave.RedisSave;
+
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class ServerTest {
      static RegHandler b,c,d;
@@ -72,5 +78,8 @@ public class ServerTest {
         Thread thread = new Thread(new Monitor());
         thread.start();
         new ServerTest().run();
+        ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
+        Jedis jedis = new Jedis("localhost");
+        service.schedule(new RedisSave(jedis), 20, TimeUnit.SECONDS);
     }
 }
