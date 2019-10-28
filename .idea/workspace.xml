@@ -2,48 +2,60 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="modServer82:jar" />
+      <artifact name="finalServer:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/getInfo_jar/modServer82.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/modServer82.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/server79/NonRegHandler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/modServer82.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/modServer82_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/modServer82_jar.xml" afterDir="false" />
+    <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="add redis save">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jedis_2_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/modServer82_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/finalServer_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/modServer82_jar/commons-collections-3.2.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/getInfo_jar/commons-collections-3.2.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/modServer82_jar/fastjson-1.2.49.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/getInfo_jar/fastjson-1.2.49.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/modServer82_jar/modServer82.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/modServer82_jar/mysql-connector-java-8.0.16.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/getInfo_jar/mysql-connector-java-8.0.16.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/modServer82_jar/netty-all-5.0.0.Alpha1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/getInfo_jar/netty-all-5.0.0.Alpha1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/background/Dev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/background/Dev.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/html/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/NonReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/NonReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/NonRegImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modServer82.iml" beforeDir="false" afterPath="$PROJECT_DIR$/finalServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/getInfo_jar/commons-collections-3.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/getInfo_jar/fastjson-1.2.49.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/getInfo_jar/modServer82.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/getInfo_jar/mysql-connector-java-8.0.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/getInfo_jar/netty-all-5.0.0.Alpha1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server79/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server79/GetMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/GetMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server79/Pdp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/Pdp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/Reg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/Reg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/RegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/RegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/Remover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/Remover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/background/Dev.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/background/Dev.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/DataChange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/DataChange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonReg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/NonReg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/NonRegHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Pdp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/Pdp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Reg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/Reg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler$calSpeed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/RegHandler$calSpeed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/RegHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/RegImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Remover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/Remover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/SharedTranMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server79/SharedTranMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/modServer82.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/background/Dev.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/background/DevInfoHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/DataChange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/GetMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/Monitor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/Monitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonReg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/Pdp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/PdpSocket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/Reg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler$calSpeed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/Remover.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server79/SharedTranMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tcp/GetInfoHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/modServer82.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,68 +74,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="1133">
+              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1165#3515#0" expanded="true" />
+                <element signature="e#2124#2192#0" />
+                <element signature="e#3514#3515#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/Reg.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/Pdp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="169" column="13" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5115">
-              <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/html/log.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+            <state relative-caret-position="495">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
               <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,55 +121,61 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/server79/PdpSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-              <folding>
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="792">
+              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="2152">
+              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/ServerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/Monitor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="297">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server79/Remover.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+            <state relative-caret-position="99">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/Future.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2541">
-              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+            <state relative-caret-position="596">
+              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,18 +197,30 @@
         <option value="wym" />
       </list>
     </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="改正之前接收到消息就创建对象。现只在用户注册时创建对象" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/server/port.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/toString.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/ServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/PdpSocket.java" />
@@ -230,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/GetMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" />
         <option value="$PROJECT_DIR$/src/main/java/background/css.css.html" />
         <option value="$PROJECT_DIR$/src/main/java/background/css.css" />
         <option value="$PROJECT_DIR$/src/main/java/background/manage.html" />
@@ -252,10 +258,20 @@
         <option value="$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/background/Dev.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/Remover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/Pdp.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/RegHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/html/log.html" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/Pdp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/SerializeUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisSave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/UserFlowUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisSaveEveryDay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" />
       </list>
     </option>
   </component>
@@ -271,10 +287,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="380" />
-    <option name="y" value="79" />
-    <option name="width" value="1938" />
-    <option name="height" value="1209" />
+    <option name="x" value="412" />
+    <option name="y" value="140" />
+    <option name="width" value="1684" />
+    <option name="height" value="1190" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,68 +299,85 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="background" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redisSave" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server79" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="modServer82" type="b2602c69:ProjectViewProjectNode" />
-              <item name="modServer82" type="462c0819:PsiDirectoryNode" />
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tcp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,22 +389,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15136719" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.side.proportion" value="0.34637514" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\html" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\background" />
+      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java" />
       <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\server" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="server" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\background" />
-      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\html" />
       <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\server" />
     </key>
   </component>
@@ -390,10 +423,10 @@
   <component name="RunManager" selected="Application.TcpGetInfo">
     <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server79.ServerTest" />
-      <module name="modServer82" />
+      <module name="finalServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server79.*" />
+          <option name="PATTERN" value="tcp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -403,7 +436,7 @@
     </configuration>
     <configuration name="TcpGetInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tcp.TcpGetInfo" />
-      <module name="modServer82" />
+      <module name="finalServer" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tcp.*" />
@@ -416,10 +449,10 @@
     </configuration>
     <configuration name="executeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server79.executeTest" />
-      <module name="modServer82" />
+      <module name="finalServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server79.*" />
+          <option name="PATTERN" value="tcp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -429,14 +462,14 @@
     </configuration>
     <configuration name="mapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mapTest" />
-      <module name="modServer82" />
+      <module name="finalServer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="toString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.toString" />
-      <module name="modServer82" />
+      <module name="finalServer" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -456,6 +489,9 @@
         <item itemvalue="Application.executeTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER,ALPHA_COMPARATOR,SHOW_INTERFACES,SHOW_PROPERTIES,SHOW_ANONYMOUS,SHOW_INHERITED,SHOW_LAMBDA" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -478,7 +514,13 @@
       <workItem from="1570843099007" duration="22681000" />
       <workItem from="1571015435401" duration="20314000" />
       <workItem from="1571362135864" duration="18836000" />
-      <workItem from="1571620376083" duration="6861000" />
+      <workItem from="1571620376083" duration="9536000" />
+      <workItem from="1571642467558" duration="7108000" />
+      <workItem from="1571965303043" duration="179000" />
+      <workItem from="1571984144067" duration="458000" />
+      <workItem from="1571984610667" duration="239000" />
+      <workItem from="1571984892357" duration="12153000" />
+      <workItem from="1572224100709" duration="11133000" />
     </task>
     <task id="LOCAL-00001" summary="丢包率较高">
       <created>1571016582644</created>
@@ -487,11 +529,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571016582644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix the wrong operations for deleting map">
+      <created>1571628364363</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571628364363</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add redis save">
+      <created>1571985745483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571985745483</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175286000" />
+    <option name="totallyTimeSpent" value="209231000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,11 +559,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="380" y="79" width="1938" height="1209" extended-state="0" />
+    <frame x="412" y="140" width="1684" height="1190" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75813955" visible="true" weight="0.13897763" />
-      <window_info id="Structure" order="1" sideWeight="0.24186046" side_tool="true" visible="true" weight="0.13897763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.56439394" visible="true" weight="0.15455665" />
+      <window_info id="Structure" order="1" sideWeight="0.43560606" side_tool="true" visible="true" weight="0.15455665" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -519,13 +575,14 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49880764" weight="0.32917318" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49841017" weight="0.32917318" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49733758" weight="0.27906978" />
+      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49602544" weight="0.27847114" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4972178" weight="0.023400936" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4978701" weight="0.3283721" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5021299" side_tool="true" weight="0.3283721" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49682036" weight="0.023400936" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4978701" weight="0.32761312" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50397456" side_tool="true" weight="0.27847114" />
+      <window_info anchor="bottom" id="SVN Repositories" order="13" weight="0.3299532" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -599,263 +656,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/main/java/redisSave" />
+    </ignored-roots>
     <MESSAGE value="丢包率较高" />
     <MESSAGE value="fix the wrong operations for deleting map" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the wrong operations for deleting map" />
+    <MESSAGE value="add redis save" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redis save" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/Delayed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ScheduledFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ideaProject/ServerMonitor/src/main/java/log.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/ideaProject/ServerMonitor/src/main/java/log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1881">
-          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt://C:/Program Files/Java/jdk-12!/jdk.javadoc/jdk/javadoc/internal/doclets/formats/html/resources/jquery/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="4320" column="4" selection-start-line="4320" selection-start-column="4" selection-end-line="4320" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="4796" column="4" selection-start-line="4796" selection-start-column="4" selection-end-line="4796" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar!/org/apache/commons/collections/map/MultiValueMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="266" column="34" selection-start-line="266" selection-start-column="34" selection-end-line="266" selection-end-column="34" />
-          <folding>
-            <element signature="e#10442#10443#0" expanded="true" />
-            <element signature="e#10495#10496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/userinfo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2409">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/person.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/log.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="866">
-          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonRegImpl.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="785" column="29" selection-start-line="785" selection-start-column="29" selection-end-line="785" selection-end-column="29" />
-          <folding>
-            <element signature="e#17077#17078#0" expanded="true" />
-            <element signature="e#17143#17144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/socket/DatagramPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/DefaultAddressedEnvelope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="e#1966#1967#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2702">
-          <caret line="142" column="64" lean-forward="true" selection-start-line="142" selection-start-column="64" selection-end-line="142" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/util/concurrent/EventExecutorGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ScheduledExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="163" column="30" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/executeTest.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3894">
-          <caret line="142" column="18" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mapTest.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="266" column="25" selection-start-line="266" selection-start-column="25" selection-end-line="266" selection-end-column="25" />
-          <folding>
-            <element signature="e#9101#9102#0" expanded="true" />
-            <element signature="e#9147#9148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/DataChange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonReg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="1101" column="23" lean-forward="true" selection-start-line="1101" selection-start-column="23" selection-end-line="1101" selection-end-column="23" />
-          <folding>
-            <element signature="e#32768#32769#0" expanded="true" />
-            <element signature="e#32819#32820#0" expanded="true" />
-            <element signature="e#48407#48408#0" expanded="true" />
-            <element signature="e#48458#48459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/GetMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/GetMessage.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/util/concurrent/EventExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
@@ -870,47 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding>
-            <element signature="e#1413#1414#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Pdp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2177#2178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/html/display.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
@@ -918,10 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Monitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/html/person.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="561">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -932,26 +702,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/html/log.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="169" column="13" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
+        <state relative-caret-position="960">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -966,16 +729,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/PdpSocket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2541">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
           <folding>
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/io/ObjectInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1240">
+          <caret line="419" column="24" selection-start-line="419" selection-start-column="24" selection-end-line="419" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/Protocol.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/SerializeUtil.java" />
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/BinaryJedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/BinaryClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/UserFlowUpdate.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding>
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Remover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/RegImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.name">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ScheduledExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -986,39 +847,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Remover.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="99825">
+          <caret line="3147" column="25" selection-start-line="3147" selection-start-column="25" selection-end-line="3147" selection-end-column="25" />
+          <folding>
+            <element signature="e#125551#125552#0" expanded="true" />
+            <element signature="e#125593#125594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36300">
+          <caret line="1124" column="17" selection-start-line="1124" selection-start-column="17" selection-end-line="1124" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11121">
+          <caret line="414" column="20" selection-start-line="414" selection-start-column="20" selection-end-line="414" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/Jedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/redis/clients/jedis/Client.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="284" column="16" selection-start-line="284" selection-start-column="16" selection-end-line="284" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2216">
+          <caret line="1783" column="22" selection-start-line="1783" selection-start-column="22" selection-end-line="1783" selection-end-column="22" />
+          <folding>
+            <element signature="e#71982#71983#0" expanded="true" />
+            <element signature="e#72032#72033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/sun/util/calendar/CalendarDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="338" column="19" selection-start-line="338" selection-start-column="19" selection-end-line="338" selection-end-column="19" />
+          <folding>
+            <element signature="e#8524#8525#0" expanded="true" />
+            <element signature="e#8557#8558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/sun/util/calendar/AbstractCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="173" column="16" selection-start-line="173" selection-start-column="16" selection-end-line="173" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="914" column="38" lean-forward="true" selection-start-line="914" selection-start-column="38" selection-end-line="914" selection-end-column="38" />
+          <folding>
+            <element signature="e#38362#38363#0" expanded="true" />
+            <element signature="e#38422#38423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/DataChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+          <folding>
+            <element signature="e#5757#5758#0" expanded="true" />
+            <element signature="e#5793#5794#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="426" column="10" selection-start-line="426" selection-start-column="10" selection-end-line="426" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="1282" column="31" selection-start-line="1282" selection-start-column="31" selection-end-line="1282" selection-end-column="31" />
+          <folding>
+            <element signature="e#32768#32769#0" expanded="true" />
+            <element signature="e#32819#32820#0" expanded="true" />
+            <element signature="e#48407#48408#0" expanded="true" />
+            <element signature="e#48458#48459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/DataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/PdpSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Pdp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5115">
-          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+        <state relative-caret-position="2152">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/log.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+        <state relative-caret-position="1133">
+          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1165#3515#0" expanded="true" />
+            <element signature="e#2124#2192#0" />
+            <element signature="e#3514#3515#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1028,11 +1088,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>modServer82:jar</last-edited>
+          <last-edited>finalServer:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.34637514" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1075,7 +1135,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>modServer82</last-edited>
+          <last-edited>finalServer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1091,7 +1151,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.34637514" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,18 +1,23 @@
 package server79;
 
-import java.sql.*;
+import redis.clients.jedis.Jedis;
 
-class DataBase {
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Set;
+
+public class DataBase {
    private Connection connection = null;
    private Statement statement = null;
    private String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
    private String DB_URL = "jdbc:mysql://39.97.171.14:3306/webrtclive?"
            +"user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8";//&autoReconnect=true
-
-   DataBase(){
+    private Jedis jedis;
+  public DataBase(){
        this.initial();
    }
-   protected Connection getConnection() {
+   public Connection getConnection() {
        return connection;
    }
 

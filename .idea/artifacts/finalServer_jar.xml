@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact name="finalServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/finalServer_jar</output-path>
+    <root id="root">
+      <element id="archive" name="finalServer.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="finalServer" />
+      </element>
+      <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.49" />
+      <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
+      <element id="library" level="project" name="Maven: io.netty:netty-all:5.0.0.Alpha1" />
+      <element id="library" level="project" name="jedis-2.4.2" />
+    </root>
+  </artifact>
+</component>

@@ -1,6 +1,8 @@
 package server79;
 
-public class PdpSocket {
+import java.io.Serializable;
+
+public class PdpSocket implements Serializable {
     private int pdpAdd; //ip地址
     private byte pdpPort; //端口
 

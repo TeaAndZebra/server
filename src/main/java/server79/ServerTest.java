@@ -7,7 +7,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import redis.clients.jedis.Jedis;
-import redisSave.RedisSave;
+import redisSave.MysqlHandler;
+import redisSave.RedisHandler;
 
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -74,12 +75,18 @@ public class ServerTest {
     }
 
     public static void main(String[] args) throws Exception {
+
         System.out.println("start");
         Thread thread = new Thread(new Monitor());
         thread.start();
         new ServerTest().run();
+
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         Jedis jedis = new Jedis("localhost");
-        service.schedule(new RedisSave(jedis), 20, TimeUnit.SECONDS);
+        service.scheduleAtFixedRate(new RedisHandler(jedis), 0,20, TimeUnit.SECONDS);
+        new MysqlHandler().insertData();
+
+
+
     }
 }

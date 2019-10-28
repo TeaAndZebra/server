@@ -2,10 +2,11 @@ package server79;
 
 import io.netty.channel.ChannelHandlerContext;
 
+import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.util.concurrent.ScheduledFuture;
 
-public class Pdp {
+public class Pdp implements Serializable {
     private PdpSocket pdpSocket;
     private long bitsOfDatagram; //接收到的bit数
     private long numOfDatagram;  //接收到的包数
@@ -69,7 +70,7 @@ public class Pdp {
         return bitsOfDatagram;
     }
 
-    public void setBitsOfDatagram(long bitsOfDatagram) {
+    public synchronized void setBitsOfDatagram(long bitsOfDatagram) {
         this.bitsOfDatagram = bitsOfDatagram;
     }
 
