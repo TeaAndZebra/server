@@ -7,8 +7,10 @@ import io.netty.channel.socket.DatagramPacket;
 
 public class RegImpl implements Reg {
     private int port;
-    RegImpl(int port){
+    private PdpSocket pdpSocket;
+    RegImpl(PdpSocket pdpSocket,int port){
         this.port = port;
+        this.pdpSocket = pdpSocket;
     }
     @Override
     public boolean equals(Object obj) {
@@ -21,6 +23,8 @@ public class RegImpl implements Reg {
         RegImpl other = (RegImpl)obj;
         if (port!=other.port)
             return false;
+        if (pdpSocket!=other.pdpSocket)
+            return false;
         return true;
 
     }
@@ -29,6 +33,7 @@ public class RegImpl implements Reg {
         final int prime = 31;
         int result = 1;
         result = prime * result + port;
+        result = prime * result + pdpSocket.hashCode();
         return result;
     }
     /**普通路由：Type = 0x00用户发送0x55	0x00	源地址（40bit）	目的地址（40bit）	用户数据*/
@@ -37,6 +42,7 @@ public class RegImpl implements Reg {
         msg.retain();
         ByteBuf buf =msg.content();
         int rBytesOfBuf= buf.readableBytes();
+//        System.out.println("reg impl readable bytes is  "+rBytesOfBuf);
         RegHandler regHandler = null;
         switch (port){
             case 5467:
@@ -58,6 +64,7 @@ public class RegImpl implements Reg {
 
             /**计算每个pdp地址对应的数据量及路由速率*/
             pdp.setBitsOfDatagram(pdp.getBitsOfDatagram() + rBytesOfBuf);
+//            System.out.println(pdp.getPdpSocket()+":"+pdp.getPdpSocket()+" num is  "+pdp.getBitsOfDatagram());
             pdp.setTestOfSpeed(pdp.getTestOfSpeed() + rBytesOfBuf);
             /**计算每个pdp地址对应的数据包数*/
             pdp.setNumOfDatagram(pdp.getNumOfDatagram() + 1);
@@ -100,10 +107,10 @@ public class RegImpl implements Reg {
                 break;
         }
         if(regHandler!=null&&pdp!=null) {
-            System.out.println(pdp.getPdpSocket() + " multiCast");
+          //  System.out.println(pdp.getPdpSocket() + " multiCast");
 
             byte numOfDesAdd = buf.getByte(7);
-            System.out.println("multicast:  num is:" + numOfDesAdd);
+           // System.out.println("multicast:  num is:" + numOfDesAdd);
             /**计算IP端口对应的数据量*/
             regHandler.setBitOfPort(regHandler.getBitOfPort() + rBytesOfBuf);
             regHandler.setTestPortSpeed(regHandler.getTestPortSpeed() + rBytesOfBuf);
@@ -137,7 +144,7 @@ public class RegImpl implements Reg {
      *服务器返回0x55 0x03	源地址（40bit）	用户数据*/
     @Override
     public void reflect(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
-        System.out.println("reflect");
+       // System.out.println("reflect");
         msg.retain();
         ByteBuf buf =  msg.content();
         ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), msg.sender()));
@@ -147,7 +154,7 @@ public class RegImpl implements Reg {
     *服务器返回0x55	0x07	速率（64bit）*/
     @Override
     public void getSpeedOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
-            System.out.println(  "get  speed");
+           // System.out.println(  "get  speed");
             byte[] echo = new byte[10];
             echo[0] = (byte) 0x55;
             echo[1] = (byte) 0x06;

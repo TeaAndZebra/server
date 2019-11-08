@@ -66,11 +66,11 @@ public class Pdp implements Serializable {
         this.pdpSocket = pdpSocket;
     }
 
-    public long getBitsOfDatagram() {
-        return bitsOfDatagram;
+    public  long getBitsOfDatagram() {
+        return this.bitsOfDatagram;
     }
 
-    public synchronized void setBitsOfDatagram(long bitsOfDatagram) {
+    public  void setBitsOfDatagram(long bitsOfDatagram) {//synchronized  锁住的是对象：非静态方法锁住的是this对象
         this.bitsOfDatagram = bitsOfDatagram;
     }
 

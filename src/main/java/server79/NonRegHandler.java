@@ -150,7 +150,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         /**
          * 由pdpSocketPdpMap是否存在对应pdpSocket判断*/
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
-            // System.out.print("重复注册");
+             System.out.print(pdpAddInt+" repeat register");
             pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
             ipPort = pdp.getIpPort();
             // System.out.println("分配ip端口为：" + echoPort);
@@ -175,6 +175,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
             }
             if (dataBase.containPdpAdd(pdpAddInt)) {
                 pdp = new Pdp(pdpSocket);
+                System.out.println(pdpAddInt+" first register success");
                 /**将add及对应port存入map*/
                 SharedTranMap.pdpPortMap.put(pdpAddInt, pdpPort);
                 /**存入对象及其socket(Socket,Object)*/
@@ -193,7 +194,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                 } else {
                     ipPort = (short) 5469;
                 }
-                RegImpl reg = new RegImpl(ipPort);
+                RegImpl reg = new RegImpl(pdpSocket,ipPort);
                 echo[2] = (byte) 0;//成功
                 echo[3] = (byte) ((ipPort >> 8) & 0xff);//port高8位
                 echo[4] = (byte) (ipPort & 0xff);//port低八位
@@ -220,11 +221,12 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                         pdp.setTestOfSpeed(0);
   //                      }
                     }
-                }, 0, 6, TimeUnit.SECONDS);
+                }, 0, 10, TimeUnit.SECONDS);
                 pdp.setCalSpeedFuture(calSpeedFuture);
 
             } else {
                 /**错误码*/
+                System.out.println(pdpAddInt+" first register error");
                 echo[2] = (byte) -1;
             }
         }

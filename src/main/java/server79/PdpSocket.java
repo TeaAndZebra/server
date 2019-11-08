@@ -1,6 +1,7 @@
 package server79;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class PdpSocket implements Serializable {
     private int pdpAdd; //ip地址
@@ -45,7 +46,7 @@ public class PdpSocket implements Serializable {
 
     @Override
     public int hashCode() {
-        final int prime = 29;
+        final int prime = 31;
         int result = 1;
         result = prime * result + pdpPort;
         result = prime * result + pdpAdd;

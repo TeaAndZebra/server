@@ -69,6 +69,7 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
     protected void messageReceived(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
         msg.retain();
         ByteBuf buf =msg.content();
+//        System.out.println("reg handler readable bytes is  "+buf.readableBytes());
         byte fByte = buf.getByte(0);
         byte sByte = buf.getByte(1);
 
@@ -78,8 +79,10 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 
         byte pdpPort =  buf.getByte(6);
         PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
-        Pdp pdp = new Pdp(pdpSocket);
+
+     //   Pdp pdp = new Pdp(pdpSocket);//和SharedTranMap.pdpSocketPdpMap中存的不是同一个pdp，
         if(SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
+            Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
             //System.out.println("success  " +buf.getByte(0)+"  "+buf.getByte(1));
             if(fByte==(byte)0x55){
                 RegImpl reg = SharedTranMap.regImplWithObject.get(pdp);

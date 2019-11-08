@@ -77,14 +77,14 @@ public class ServerTest {
     public static void main(String[] args) throws Exception {
 
         System.out.println("start");
-        Thread thread = new Thread(new Monitor());
-        thread.start();
-        new ServerTest().run();
-
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         Jedis jedis = new Jedis("localhost");
         service.scheduleAtFixedRate(new RedisHandler(jedis), 0,20, TimeUnit.SECONDS);
         new MysqlHandler().insertData();
+//        Thread thread = new Thread(new Monitor());
+//        thread.start();
+        new ServerTest().run();
+
 
 
 

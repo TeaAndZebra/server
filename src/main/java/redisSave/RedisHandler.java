@@ -5,6 +5,7 @@ import server79.Pdp;
 import server79.PdpSocket;
 import server79.SharedTranMap;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 public class RedisHandler implements Runnable {
@@ -15,21 +16,22 @@ public class RedisHandler implements Runnable {
 
     @Override
     public void run() {
+       //System.out.println(System.currentTimeMillis()+"  run ");
         for (Map.Entry<PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()){
             Pdp pdp = entry.getValue();
+          //  System.out.println(pdp+" "+pdp.getPdpSocket().getPdpAdd()+" : "+pdp.getPdpSocket().getPdpPort()+"  ,time is "+System.currentTimeMillis()+" num is  "+pdp.getBitsOfDatagram());
             if(pdp.getBitsOfDatagram()!=0){
-                long flowNow = pdp.getBitsOfDatagram();
-                byte[] flowPreByte = jedis.get((pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort()).getBytes());
-                if(flowPreByte!=null) {
-                    long flowPre = Long.parseLong(new String(flowPreByte));
-//                    System.out.println("redis flowPre is  " + flowPre);
-                    flowNow += flowPre;
-                    pdp.setBitsOfDatagram(0);
-//                    System.out.println("redis flowNow is  " +  flowNow);
-
+                double flow = pdp.getBitsOfDatagram()/1000000.0;//MB
+                BigDecimal bg = new BigDecimal(flow);
+                double flowNow = bg.setScale(3,BigDecimal.ROUND_HALF_UP).doubleValue();
+                Double flowPre = jedis.zscore("UserFlow", pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort());
+                if(flowPre!=null){
+                    jedis.zincrby("UserFlow",flowNow,pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort() );
+                }else {
+                    jedis.zadd("UserFlow",flowNow,pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort() );
                 }
-                jedis.set((pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort()).getBytes(),String.valueOf(flowNow).getBytes());
                 pdp.setBitsOfDatagram(0);
+                System.out.println(" redis flowNow is  " +  flowNow+flowPre);
             }
         }
     }

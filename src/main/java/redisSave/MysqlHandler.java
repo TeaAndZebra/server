@@ -55,26 +55,28 @@ public class MysqlHandler {
                     e.printStackTrace();
                 }
 
-                for(Map.Entry< PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()){
+                for(Map.Entry< PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()) {
                     Pdp pdp = entry.getValue();
-                    byte[] flowByte = jedis.get((pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort()).getBytes());
-                    String userStr  =  (pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort());
-                    String flowStr = new String(flowByte);
-                    SimpleDateFormat sdf = new SimpleDateFormat();// 格式化时间
-                    sdf.applyPattern("yyyy-MM-dd HH:mm:ss");//
-                    Date date = new Date();// 获取当前时间
-                    String time = sdf.format(date);
+                    Double flowD = jedis.zscore("UserFlow", pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                    Long flow = flowD != null ? flowD.longValue() : null;
+                    if (flow != null && flow != 0) {
+                        String userStr = (pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                        SimpleDateFormat sdf = new SimpleDateFormat();// 格式化时间
+                        sdf.applyPattern("yyyy-MM-dd HH:mm:ss");//
+                        Date date = new Date();// 获取当前时间
+                        String time = sdf.format(date);
 //                    System.out.println("time is : " + time+" now"); // 输出已经格式化的现在时间（24小时制）
-                    try {
-                        String sql = "INSERT INTO user_daily_flow(user,flow,time) " +
-                                "VALUES ('" + userStr + "','"+flowStr+"','"+time+"')";
-                        statement.execute(sql);
-                        /**redis 清0*/
-                        jedis.set(userStr.getBytes(), String.valueOf(0).getBytes());
-                    } catch (SQLException se) {
-                        se.printStackTrace();
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        try {
+                            String sql = "INSERT INTO user_daily_flow(user,flow,time) " +
+                                    "VALUES ('" + userStr + "','" + flow + "','" + time + "')";
+                            statement.execute(sql);
+                            /**redis 清0*/
+                            jedis.zadd("UserFlow", 0, pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                        } catch (SQLException se) {
+                            se.printStackTrace();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 try {
