@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/finalServer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/tcpServer_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/Pdp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/Pdp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/PdpSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/RegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/RegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="198">
               <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -69,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2805">
+            <state relative-caret-position="2310">
               <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -495,7 +484,7 @@
       <workItem from="1572224100709" duration="15843000" />
       <workItem from="1572570220241" duration="9928000" />
       <workItem from="1572829437923" duration="23621000" />
-      <workItem from="1573174887967" duration="8090000" />
+      <workItem from="1573174887967" duration="8415000" />
     </task>
     <task id="LOCAL-00001" summary="丢包率较高">
       <created>1571016582644</created>
@@ -525,11 +514,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572250336032</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add redis save">
+      <created>1573183360444</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573183360444</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255580000" />
+    <option name="totallyTimeSpent" value="255905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,8 +537,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6126526" visible="true" weight="0.14626391" />
       <window_info id="Structure" order="1" sideWeight="0.3873474" side_tool="true" visible="true" weight="0.14626391" />
@@ -1087,24 +1082,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="198">
           <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#266#267#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
