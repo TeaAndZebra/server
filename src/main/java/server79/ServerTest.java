@@ -6,6 +6,8 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 import redisSave.MysqlHandler;
 import redisSave.RedisHandler;
@@ -15,8 +17,8 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class ServerTest {
-     static RegHandler b,c,d;
-
+    static RegHandler b,c,d;
+    static Logger logger = LogManager.getLogger(ServerTest.class.getName());
     private void run() throws Exception {
         EventLoopGroup group = new NioEventLoopGroup(4);
         try {
@@ -76,7 +78,8 @@ public class ServerTest {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.println("start");
+//        System.out.println("start");
+        logger.info("start");
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         Jedis jedis = new Jedis("localhost");
         service.scheduleAtFixedRate(new RedisHandler(jedis), 0,20, TimeUnit.SECONDS);

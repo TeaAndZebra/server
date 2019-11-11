@@ -1,5 +1,7 @@
 package server79;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
 import java.sql.*;
@@ -14,6 +16,7 @@ public class DataBase {
    private String DB_URL = "jdbc:mysql://39.97.171.14:3306/webrtclive?"
            +"user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8";//&autoReconnect=true
     private Jedis jedis;
+    static Logger logger = LogManager.getLogger(DataBase.class.getName());
   public DataBase(){
        this.initial();
    }
@@ -25,21 +28,18 @@ public class DataBase {
        try {
            Class.forName(JDBC_DRIVER);
        } catch (ClassNotFoundException e) {
-           e.printStackTrace();
+//           e.printStackTrace();
+           logger.error(e.getMessage(),e);
        }
 
        //  System.out.println("连接数据库...");
-       try {
-           connection = DriverManager.getConnection(DB_URL);
-       } catch (SQLException e) {
-           e.printStackTrace();
-       }
-
        //  System.out.println("实例化statement对象...");
        try {
+           connection = DriverManager.getConnection(DB_URL);
            statement = connection.createStatement();
        } catch (SQLException e) {
-           e.printStackTrace();
+//           e.printStackTrace();
+           logger.error(e.getMessage(),e);
        }
    }
     protected int getUserAdd(String user_id){
@@ -62,9 +62,11 @@ public class DataBase {
           //  connection.close();
 
         }catch (SQLException se){
-            se.printStackTrace();
+//            se.printStackTrace();
+            logger.error(se.getMessage(),se);
         } catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
+            logger.error(e.getMessage(),e);
         }
         return userAdd;
 
@@ -89,9 +91,11 @@ public class DataBase {
             rs.close();
 
         } catch (SQLException se) {
-            se.printStackTrace();
+//            se.printStackTrace();
+            logger.error(se.getMessage(),se);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            logger.error(e.getMessage(),e);
         }
         return contain;
     }

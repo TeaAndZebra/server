@@ -1,10 +1,11 @@
 package redisSave;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
-import server79.DataBase;
-import server79.Pdp;
-import server79.PdpSocket;
-import server79.SharedTranMap;
+import redis.clients.jedis.exceptions.JedisConnectionException;
+import redis.clients.jedis.exceptions.JedisException;
+import server79.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,11 +21,12 @@ public class MysqlHandler {
     private  String DB_URL = "jdbc:mysql://39.97.171.14:3306/webrtclive?"
             +"user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT";//&autoReconnect=true
     private  final long PERIOD_DAY =  24 * 60 * 60 * 1000;
+    static Logger logger = LogManager.getLogger(MysqlHandler.class.getName());
 
 
     public void insertData() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 1);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         Date date = calendar.getTime();
@@ -35,29 +37,34 @@ public class MysqlHandler {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
+                logger.info("insert into mysql");
                 /**connect to mysql database*/
                 Jedis jedis = new Jedis("localhost");
                 try {
                     Class.forName(JDBC_DRIVER);
                 } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
                 try {
                     connection = DriverManager.getConnection(DB_URL);
                 } catch (SQLException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
 
                 //  System.out.println("实例化statement对象...");
                 try {
                     statement = connection.createStatement();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
 
                 for(Map.Entry< PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()) {
                     Pdp pdp = entry.getValue();
                     Double flowD = jedis.zscore("UserFlow", pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                    logger.debug("[{}]:[{}] previous user flow is [{}]",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort(),flowD);
                     Long flow = flowD != null ? flowD.longValue() : null;
                     if (flow != null && flow != 0) {
                         String userStr = (pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
@@ -71,18 +78,26 @@ public class MysqlHandler {
                                     "VALUES ('" + userStr + "','" + flow + "','" + time + "')";
                             statement.execute(sql);
                             /**redis 清0*/
-                            jedis.zadd("UserFlow", 0, pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                            try {
+                                jedis.zadd("UserFlow", 0, pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                            }catch (JedisConnectionException e){
+                                logger.error(e.getMessage(), e);
+                            }
+
                         } catch (SQLException se) {
-                            se.printStackTrace();
+//                            se.printStackTrace();
+                            logger.error(se.getMessage(), se);
                         } catch (Exception e) {
-                            e.printStackTrace();
+//                           e.printStackTrace();
+                            logger.error(e.getMessage(), e);
                         }
                     }
                 }
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
             }
         };

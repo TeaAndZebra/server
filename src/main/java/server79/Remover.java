@@ -1,19 +1,23 @@
 package server79;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
 public class Remover implements Runnable {
     private Pdp pdp;
-
+    static Logger logger = LogManager.getLogger(Remover.class.getName());
     Remover(Pdp pdp) {
         this.pdp = pdp;
     }
     @Override
     public void run() {
         if (SharedTranMap.pdpSocketPdpMap.containsValue(pdp)) {
-                System.out.println( pdp.getPdpSocket().getPdpAdd()+" :  "+pdp.getPdpSocket().getPdpPort()+" is removed");
+                logger.info("[{}]:[{}] is removed",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+//                System.out.println( pdp.getPdpSocket().getPdpAdd()+" :  "+pdp.getPdpSocket().getPdpPort()+" is removed");
                 SharedTranMap.pdpPortMap.remove(pdp.getPdpSocket().getPdpAdd(), pdp.getPdpSocket().getPdpPort());
                 SharedTranMap.pdpSocketPdpMap.remove(pdp.getPdpSocket(), pdp);
                 SharedTranMap.regImplWithObject.remove(pdp);

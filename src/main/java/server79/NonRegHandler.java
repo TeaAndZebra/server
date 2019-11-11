@@ -5,6 +5,8 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -15,12 +17,12 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-
 public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> implements NonReg {
     private static DataBase dataBase = null;
     private ByteBuf buf;
     private DatagramPacket msg;
     private ScheduledExecutorService myService = new ScheduledThreadPoolExecutor(3);
+    static Logger logger = LogManager.getLogger(NonRegHandler.class.getName());
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -53,6 +55,9 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                     updateIp(ctx);
                     break;
             }
+        }else {
+            //    System.out.println("fail "+Integer.toHexString(buf.getByte(0))+"  "+Integer.toHexString(buf.getByte(1)));
+            logger.info(" non reg first two bytes wrong :[{}] [{}]",Integer.toHexString(buf.getByte(0)),Integer.toHexString(buf.getByte(1)));
         }
     }
 
@@ -70,6 +75,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
     @Override
     public void parseId(ChannelHandlerContext ctx) throws Exception {
         //  System.out.println("ID解析");
+        logger.debug("parse id");
         byte lengthOfId = buf.getByte(2);
         byte[] ID = new byte[lengthOfId];
         buf.getBytes(3, ID, 0, lengthOfId);
@@ -104,6 +110,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
      */
     @Override
     public void queryRegInfo(ChannelHandlerContext ctx) throws Exception {
+        logger.debug("query reg info");
         byte[] pdpAddByte = new byte[4];
         buf.getBytes(2, pdpAddByte, 0, 4);
         int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
@@ -134,6 +141,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
      */
     @Override
     public void register(ChannelHandlerContext ctx) throws Exception {
+        logger.debug("apply for register");
         byte[] pdpAddByte = new byte[4];
         buf.getBytes(2, pdpAddByte, 0, 4);
         byte pdpPort = buf.getByte(6);
@@ -226,7 +234,8 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
 
             } else {
                 /**错误码*/
-                System.out.println(pdpAddInt+" first register error");
+//                System.out.println(pdpAddInt+" first register error");
+                logger.info("invalid pdpAddInt [{}] in first register ",pdpAddInt);
                 echo[2] = (byte) -1;
             }
         }
@@ -239,6 +248,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
      */
     @Override
     public void updateIp(ChannelHandlerContext ctx) throws Exception {
+        logger.info("update ip");
         byte[] pdpAddByte = new byte[4];
         buf.getBytes(2, pdpAddByte, 0, 4);
         int pdpAddInt = DataChange.bytes2Int(pdpAddByte);
@@ -248,6 +258,8 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
             //System.out.println(pdpAddInt + "update IP");
             Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            logger.debug("[{}]:[{}] cancel",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+
             pdp.setIpAdd(msg.sender());
             pdp.setCtx(ctx);
             //重启定时器
@@ -258,7 +270,8 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
           //  ScheduledFuture future = ctx.executor().schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
             pdp.setTimer(future);
         } else {
-            System.out.println("address error when updating ip");
+//            System.out.println("address error when updating ip");
+            logger.info("address error when updating ip");
         }
     }
 
@@ -268,6 +281,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
      */
     @Override
     public void cancel(ChannelHandlerContext ctx) throws Exception {
+        logger.info("cancel");
         byte[] pdpAddByte = new byte[4];
         buf.getBytes(2, pdpAddByte, 0, 4);
 
@@ -279,10 +293,12 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         /**
          * 注销在pdpSocketPdpMap及pdpPortMap及regImplWithObject中进行删除*/
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
-            System.out.println(pdpAddInt + "cancel");
+//            System.out.println(pdpAddInt + "cancel");
+
             SharedTranMap.pdpPortMap.remove(pdpAddInt, pdpPort);
 
             Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            logger.debug("[{}]:[{}] cancel",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
             SharedTranMap.pdpSocketPdpMap.remove(pdpSocket,pdp );
             SharedTranMap.regImplWithObject.remove(pdp);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
