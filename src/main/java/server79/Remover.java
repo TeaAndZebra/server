@@ -9,7 +9,7 @@ import java.util.TimeZone;
 
 public class Remover implements Runnable {
     private Pdp pdp;
-    static Logger logger = LogManager.getLogger(Remover.class.getName());
+    private static Logger logger = LogManager.getLogger(Remover.class.getName());
     Remover(Pdp pdp) {
         this.pdp = pdp;
     }

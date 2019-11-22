@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ServerTest {
     static RegHandler b,c,d;
-    static Logger logger = LogManager.getLogger(ServerTest.class.getName());
+   private static Logger logger = LogManager.getLogger(ServerTest.class.getName());
     private void run() throws Exception {
-        EventLoopGroup group = new NioEventLoopGroup(4);
+        EventLoopGroup group = new NioEventLoopGroup(5);
         try {
 
             Bootstrap b0 = new Bootstrap();

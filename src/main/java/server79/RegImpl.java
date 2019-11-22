@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 public class RegImpl implements Reg {
     private int port;
     private PdpSocket pdpSocket;
-    static Logger logger = LogManager.getLogger(RegImpl.class.getName());
+    private static Logger logger = LogManager.getLogger(RegImpl.class.getName());
     RegImpl(PdpSocket pdpSocket,int port){
         this.port = port;
         this.pdpSocket = pdpSocket;

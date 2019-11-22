@@ -28,7 +28,7 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
     private long bitOfPort =0;
     private long speedOfPort = 0;
     private long testPortSpeed = 0;
-    static Logger logger = LogManager.getLogger(RegHandler.class.getName());
+    private static Logger logger = LogManager.getLogger(RegHandler.class.getName());
     public long getSpeedOfPort() {
         return speedOfPort;
     }

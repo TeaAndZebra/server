@@ -18,9 +18,18 @@ public class Pdp implements Serializable {
     private InetSocketAddress ipAdd;
     private String logInTime;
     private String logOffTime;
-    private boolean isActive;
+  //  private boolean isActive;
     private ScheduledFuture calSpeedFuture;
     private ScheduledFuture timer;
+
+    public Pdp(PdpSocket pdpSocket){
+        this.pdpSocket = pdpSocket;
+    }
+
+    @Override
+    public String toString() {
+        return pdpSocket.toString();
+    }
 
     public ScheduledFuture getTimer() {
         return timer;
@@ -38,13 +47,13 @@ public class Pdp implements Serializable {
         this.calSpeedFuture = calSpeedFuture;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
+//    public boolean isActive() {
+//        return isActive;
+//    }
+//
+//    public void setActive(boolean active) {
+//        isActive = active;
+//    }
 
     public String getLogOffTime() {
         return logOffTime;
@@ -54,16 +63,9 @@ public class Pdp implements Serializable {
         this.logOffTime = logOffTime;
     }
 
-    public Pdp(PdpSocket pdpSocket){
-        this.pdpSocket = pdpSocket;
-    }
 
     public PdpSocket getPdpSocket() {
         return pdpSocket;
-    }
-
-    public void setPdpSocket(PdpSocket pdpSocket) {
-        this.pdpSocket = pdpSocket;
     }
 
     public  long getBitsOfDatagram() {

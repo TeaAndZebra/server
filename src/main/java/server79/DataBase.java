@@ -16,7 +16,7 @@ public class DataBase {
    private String DB_URL = "jdbc:mysql://39.97.171.14:3306/webrtclive?"
            +"user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8";//&autoReconnect=true
     private Jedis jedis;
-    static Logger logger = LogManager.getLogger(DataBase.class.getName());
+    private static Logger logger = LogManager.getLogger(DataBase.class.getName());
   public DataBase(){
        this.initial();
    }

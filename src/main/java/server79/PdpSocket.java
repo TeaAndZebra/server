@@ -27,6 +27,12 @@ public class PdpSocket implements Serializable {
     public int getPdpAdd() {
         return pdpAdd;
     }
+
+    @Override
+    public String toString() {
+        return "pdpAdd "+pdpAdd+"pdpPort:"+pdpPort;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

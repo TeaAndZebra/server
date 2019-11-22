@@ -22,7 +22,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
     private ByteBuf buf;
     private DatagramPacket msg;
     private ScheduledExecutorService myService = new ScheduledThreadPoolExecutor(3);
-    static Logger logger = LogManager.getLogger(NonRegHandler.class.getName());
+    private static Logger logger = LogManager.getLogger(NonRegHandler.class.getName());
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

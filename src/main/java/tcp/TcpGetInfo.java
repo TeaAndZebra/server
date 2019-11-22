@@ -8,12 +8,15 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class TcpGetInfo {
-    public void startTcp(){
-        EventLoopGroup acceptor = new NioEventLoopGroup();
+    private static Logger logger = LogManager.getLogger(TcpGetInfo.class.getName());
+    private void startTcp(){
+       EventLoopGroup acceptor = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
-        try {
+         try {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(acceptor,worker);
             bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
@@ -27,7 +30,8 @@ public class TcpGetInfo {
             ChannelFuture f = bootstrap.bind(45684).sync();
             f.channel().closeFuture().sync();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         } finally {
             acceptor.shutdownGracefully();
             worker.shutdownGracefully();
