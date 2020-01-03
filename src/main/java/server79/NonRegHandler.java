@@ -158,7 +158,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         /**
          * 由pdpSocketPdpMap是否存在对应pdpSocket判断*/
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
-             System.out.print(pdpAddInt+" repeat register");
+            logger.info("[{}] repeat register",pdpAddInt);
             pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
             ipPort = pdp.getIpPort();
             // System.out.println("分配ip端口为：" + echoPort);
@@ -183,7 +183,8 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
             }
             if (dataBase.containPdpAdd(pdpAddInt)) {
                 pdp = new Pdp(pdpSocket);
-                System.out.println(pdpAddInt+" first register success");
+                logger.info("[{}] first register success",pdp.toString());
+
                 /**将add及对应port存入map*/
                 SharedTranMap.pdpPortMap.put(pdpAddInt, pdpPort);
                 /**存入对象及其socket(Socket,Object)*/
@@ -225,7 +226,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                     @Override
                     public void run() {
    //                   if(pdp!=null) {
-                        pdp.setSpeedOfDatagram(pdp.getTestOfSpeed() / 6);
+                        pdp.setSpeedOfDatagram(pdp.getTestOfSpeed() /10);
                         pdp.setTestOfSpeed(0);
   //                      }
                     }
@@ -235,7 +236,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
             } else {
                 /**错误码*/
 //                System.out.println(pdpAddInt+" first register error");
-                logger.info("invalid pdpAddInt [{}] in first register ",pdpAddInt);
+                logger.info("invalid pdp [{}] in first register ",pdpAddInt);
                 echo[2] = (byte) -1;
             }
         }
@@ -244,7 +245,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
 
     /**
      * 更新IP地址 = 0x05
-     * 用户发送 0x55	0x05	源地址（40bit）
+     * 用户发送 0xD6	0x05	源地址（40bit）
      */
     @Override
     public void updateIp(ChannelHandlerContext ctx) throws Exception {
@@ -258,7 +259,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
             //System.out.println(pdpAddInt + "update IP");
             Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
-            logger.debug("[{}]:[{}] cancel",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+            logger.debug("[{}] update ip",pdp.toString());
 
             pdp.setIpAdd(msg.sender());
             pdp.setCtx(ctx);
@@ -298,7 +299,7 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
             SharedTranMap.pdpPortMap.remove(pdpAddInt, pdpPort);
 
             Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
-            logger.debug("[{}]:[{}] cancel",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+            logger.debug("[{}] cancel",pdp.toString());
             SharedTranMap.pdpSocketPdpMap.remove(pdpSocket,pdp );
             SharedTranMap.regImplWithObject.remove(pdp);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");

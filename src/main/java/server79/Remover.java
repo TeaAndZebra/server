@@ -16,7 +16,7 @@ public class Remover implements Runnable {
     @Override
     public void run() {
         if (SharedTranMap.pdpSocketPdpMap.containsValue(pdp)) {
-                logger.info("[{}]:[{}] is removed",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+                logger.info("[{}] is removed",pdp.toString());
 //                System.out.println( pdp.getPdpSocket().getPdpAdd()+" :  "+pdp.getPdpSocket().getPdpPort()+" is removed");
                 SharedTranMap.pdpPortMap.remove(pdp.getPdpSocket().getPdpAdd(), pdp.getPdpSocket().getPdpPort());
                 SharedTranMap.pdpSocketPdpMap.remove(pdp.getPdpSocket(), pdp);

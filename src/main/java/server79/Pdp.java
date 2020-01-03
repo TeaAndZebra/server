@@ -21,14 +21,21 @@ public class Pdp implements Serializable {
   //  private boolean isActive;
     private ScheduledFuture calSpeedFuture;
     private ScheduledFuture timer;
-
+    private Double currentFlow;
     public Pdp(PdpSocket pdpSocket){
         this.pdpSocket = pdpSocket;
     }
-
     @Override
     public String toString() {
         return pdpSocket.toString();
+    }
+
+    public Double getCurrentFlow() {
+        return currentFlow;
+    }
+
+    public void setCurrentFlow(Double currentFlow) {
+        this.currentFlow = currentFlow;
     }
 
     public ScheduledFuture getTimer() {

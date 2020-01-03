@@ -20,13 +20,12 @@ public class MysqlHandler {
     private  String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     private  String DB_URL = "jdbc:mysql://39.97.171.14:3306/webrtclive?"
             +"user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT";//&autoReconnect=true
-    private  final long PERIOD_DAY =  24 * 60 * 60 * 1000;
+    private  final long PERIOD_MINUTE = 60 * 1000;
     static Logger logger = LogManager.getLogger(MysqlHandler.class.getName());
 
 
     public void insertData() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 1);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         Date date = calendar.getTime();
@@ -63,23 +62,23 @@ public class MysqlHandler {
 
                 for(Map.Entry< PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()) {
                     Pdp pdp = entry.getValue();
-                    Double flowD = jedis.zscore("UserFlow", pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
-                    logger.debug("[{}]:[{}] previous user flow is [{}]",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort(),flowD);
+                    Double flowD = jedis.zscore("UserFlow", pdp.toString());
+                    logger.debug("[{}] previous user flow is [{}]",pdp.toString(),flowD);
                     Long flow = flowD != null ? flowD.longValue() : null;
                     if (flow != null && flow != 0) {
-                        String userStr = (pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
                         SimpleDateFormat sdf = new SimpleDateFormat();// 格式化时间
                         sdf.applyPattern("yyyy-MM-dd HH:mm:ss");//
                         Date date = new Date();// 获取当前时间
                         String time = sdf.format(date);
+                        logger.debug("time is [{}]",time);
 //                    System.out.println("time is : " + time+" now"); // 输出已经格式化的现在时间（24小时制）
                         try {
                             String sql = "INSERT INTO user_daily_flow(user,flow,time) " +
-                                    "VALUES ('" + userStr + "','" + flow + "','" + time + "')";
+                                    "VALUES ('" + pdp.toString() + "','" + flow + "','" + time + "')";
                             statement.execute(sql);
                             /**redis 清0*/
                             try {
-                                jedis.zadd("UserFlow", 0, pdp.getPdpSocket().getPdpAdd() + ":" + pdp.getPdpSocket().getPdpPort());
+                                jedis.zadd("UserFlow", 0, pdp.toString());
                             }catch (JedisConnectionException e){
                                 logger.error(e.getMessage(), e);
                             }
@@ -101,13 +100,14 @@ public class MysqlHandler {
                 }
             }
         };
-        timer.schedule(timerTask, date,PERIOD_DAY);
+        timer.schedule(timerTask, date,PERIOD_MINUTE);
 
     }
     private Date addDay(Date date, int num) {
         Calendar startDT = Calendar.getInstance();
         startDT.setTime(date);
-        startDT.add(Calendar.DAY_OF_MONTH, num);
+        startDT.add(Calendar.MINUTE, num);
+    //    startDT.add(Calendar.DAY_OF_MONTH, num);
         return startDT.getTime();
     }
 }

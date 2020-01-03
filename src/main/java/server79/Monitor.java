@@ -9,11 +9,14 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Monitor implements Runnable {
+    private static Logger logger = LogManager.getLogger(Monitor.class.getName());
     @Override
     public void run() {
-        System.out.println("tcp start");
+        logger.info("tcp start");
         EventLoopGroup acceptor = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
         try {

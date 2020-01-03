@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ServerTest {
     static RegHandler b,c,d;
-   private static Logger logger = LogManager.getLogger(ServerTest.class.getName());
+    private static Logger logger = LogManager.getLogger(ServerTest.class.getName());
     private void run() throws Exception {
         EventLoopGroup group = new NioEventLoopGroup(5);
         try {
@@ -82,10 +82,10 @@ public class ServerTest {
         logger.info("start");
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         Jedis jedis = new Jedis("localhost");
-        service.scheduleAtFixedRate(new RedisHandler(jedis), 0,20, TimeUnit.SECONDS);
+        service.scheduleAtFixedRate(new RedisHandler(jedis), 0,15, TimeUnit.SECONDS);
         new MysqlHandler().insertData();
-//        Thread thread = new Thread(new Monitor());
-//        thread.start();
+        Thread thread = new Thread(new Monitor());
+        thread.start();
         new ServerTest().run();
 
 

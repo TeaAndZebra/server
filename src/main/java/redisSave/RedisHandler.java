@@ -21,7 +21,7 @@ public class RedisHandler implements Runnable {
             Pdp pdp = entry.getValue();
           //  System.out.println(pdp+" "+pdp.getPdpSocket().getPdpAdd()+" : "+pdp.getPdpSocket().getPdpPort()+"  ,time is "+System.currentTimeMillis()+" num is  "+pdp.getBitsOfDatagram());
             if(pdp.getBitsOfDatagram()!=0){
-                double flow = pdp.getBitsOfDatagram()/1000000.0;//MB
+                double flow = pdp.getBitsOfDatagram()/100.0;//MB
                 BigDecimal bg = new BigDecimal(flow);
                 double flowNow = bg.setScale(3,BigDecimal.ROUND_HALF_UP).doubleValue();
                 Double flowPre = jedis.zscore("UserFlow", pdp.getPdpSocket().getPdpAdd()+":"+pdp.getPdpSocket().getPdpPort());

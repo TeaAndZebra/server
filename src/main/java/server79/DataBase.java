@@ -62,10 +62,10 @@ public class DataBase {
           //  connection.close();
 
         }catch (SQLException se){
-//            se.printStackTrace();
+            // se.printStackTrace();
             logger.error(se.getMessage(),se);
         } catch (Exception e){
-//            e.printStackTrace();
+        // e.printStackTrace();
             logger.error(e.getMessage(),e);
         }
         return userAdd;
@@ -91,10 +91,10 @@ public class DataBase {
             rs.close();
 
         } catch (SQLException se) {
-//            se.printStackTrace();
+        // se.printStackTrace();
             logger.error(se.getMessage(),se);
         } catch (Exception e) {
-//            e.printStackTrace();
+        //  e.printStackTrace();
             logger.error(e.getMessage(),e);
         }
         return contain;

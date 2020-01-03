@@ -30,7 +30,7 @@ public class PdpSocket implements Serializable {
 
     @Override
     public String toString() {
-        return "pdpAdd "+pdpAdd+"pdpPort:"+pdpPort;
+        return pdpAdd+":"+pdpPort;
     }
 
     @Override

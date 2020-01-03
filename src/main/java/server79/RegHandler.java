@@ -22,7 +22,7 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
     RegHandler(int ipPort){
         this.ipPort = ipPort;
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
-        service.scheduleAtFixedRate(new calSpeed(),0,6,TimeUnit.SECONDS);
+        service.scheduleAtFixedRate(new calSpeed(),0,10,TimeUnit.SECONDS);
     }
     /**测试端口路由数据量*/
     private long bitOfPort =0;
@@ -57,14 +57,13 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
         @Override
         public void run() {
             /**每6s更新端口路由速率*/
-            speedOfPort = testPortSpeed/6;
+            speedOfPort = testPortSpeed/10;
             testPortSpeed  = 0;
         }
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-//        System.out.println("channelActive");
             logger.info("[{}] channel active",Thread.currentThread().getName());
 
     }

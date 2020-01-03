@@ -83,7 +83,7 @@ public class RegImpl implements Reg {
             if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocketDes)) {
                 //System.out.println(pdp.getPdpSocket()+  " singleCast desAdd is : "+pdpSocketIntDes+" port is： "+desPort);
                 Pdp dest = SharedTranMap.pdpSocketPdpMap.get(pdpSocketDes);
-                logger.debug("[{}]:[{}] send packages to [{}]:[{}]",pdpSocket.getPdpAdd(),pdpSocket.getPdpPort(),pdpSocketDes.getPdpAdd(),pdpSocketDes.getPdpPort());
+                logger.debug("[{}] send packages to [{}]",pdpSocket.toString(),pdpSocketDes.toString());
                 dest.getCtx().writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), dest.getIpAdd()));
             }
         }else {
@@ -137,7 +137,7 @@ public class RegImpl implements Reg {
                 PdpSocket pdpSocketDes = new PdpSocket(pdpSocketIntDes, destPort);
                 if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocketDes)) {
                    // System.out.println(pdp.getPdpSocket()+  " multiCast desAdd is "+pdpSocketIntDes+" port is"+destPort);
-                    logger.debug("[{}]:[{}] send packages to [{}]:[{}]",pdpSocket.getPdpAdd(),pdpSocket.getPdpPort(),pdpSocketDes.getPdpAdd(),pdpSocketDes.getPdpPort());
+                    logger.debug(" multiCast [{}] send packages to [{}]",pdpSocket.toString(),pdpSocketDes.toString());
                     Pdp pdpDest = SharedTranMap.pdpSocketPdpMap.get(pdpSocketDes);
                     pdpDest.getCtx().writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(buf), pdpDest.getIpAdd()));
                 }else{
@@ -165,7 +165,7 @@ public class RegImpl implements Reg {
     @Override
     public void getSpeedOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
            // System.out.println(  "get  speed");
-        logger.debug("get speed of [{}]:[{}]",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+        logger.debug("get speed of [{}]",pdp.toString());
         byte[] echo = new byte[10];
         echo[0] = (byte) 0x55;
         echo[1] = (byte) 0x06;
@@ -182,7 +182,7 @@ public class RegImpl implements Reg {
     @Override
     public void getBitsOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
 // System.out.println(obj+"获取路由报文数据量byte:"+obj.getBitsOfDatagram());
-        logger.debug("get bits of [{}]:[{}]",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+        logger.debug("get bits of [{}]",pdp.toString());
         byte[] echo = new byte[10];
         echo[0] = (byte) 0x55;
         echo[1] = (byte) 0x05;
@@ -199,7 +199,7 @@ public class RegImpl implements Reg {
     @Override
     public void getNumOfUser(ChannelHandlerContext ctx, DatagramPacket msg,Pdp pdp) throws Exception {
 //        System.out.println(pdp + "get num"+pdp.getNumOfDatagram());
-        logger.debug("get num of [{}]:[{}]",pdp.getPdpSocket().getPdpAdd(),pdp.getPdpSocket().getPdpPort());
+        logger.debug("get num of [{}]",pdp.toString());
 
         //  System.out.println(obj + "获取路由报文数:"+obj.getNumOfDatagram());
             byte[] echo = new byte[10];
