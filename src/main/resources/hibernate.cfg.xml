@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+    </property>
+    <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+    </property>
+    <property name="connection.url">
+      "jdbc:mysql://39.97.171.14:3306/webrtclive?user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8"
+    </property>
+
+     <property name="connection.username">
+       root
+     </property>
+     <property name="connection.password">
+       123abc
+     </property>
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">4</property>
+
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+
+    <!--以格式良好的方式显示SQL语句-->
+    <property name="format_sql">true</property>
+    <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">true</property>
+
+    <!-- Drop and re-create the database schema on startup -->
+    <property name="hbm2ddl.auto">update</property>
+
+  </session-factory>
+</hibernate-configuration>
