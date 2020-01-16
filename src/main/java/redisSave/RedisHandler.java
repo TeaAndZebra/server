@@ -7,7 +7,12 @@ import server79.SharedTranMap;
 
 import java.math.BigDecimal;
 import java.util.Map;
-
+/**
+ * redisSave.RedisHandler
+ * 每15s在redis数据库中存入当前数据流量
+ * redisSave.MysqlHandler
+ * 每天0点在mysql数据库中插入item（一天的流量），并清空redis数据库流量
+ * **/
 public class RedisHandler implements Runnable {
     private Jedis jedis;
     public RedisHandler(Jedis jedis){
