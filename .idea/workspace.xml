@@ -7,38 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/LinksRelationshipDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/LoginTicketDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/UserDeviceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/DevConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/LinksRelationship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/UserServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DevConfigDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LinksRelationshipDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LoginTicketMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/UserDeviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DbTcpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ModeTset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DataBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DataBaseInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DatabaseMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/DbTcp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DecodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/databaseOperation/Decoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,10 +63,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ModeTset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="421" column="60" selection-start-line="421" selection-start-column="60" selection-end-line="421" selection-end-column="60" />
+            <state relative-caret-position="176">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,28 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/src_dev_config">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/login_ticket">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/Device.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/instrument/SqlSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="528">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,54 +87,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/links_relationship">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DbTcpTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/Monitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1088#1328#0" expanded="true" />
-                <element signature="e#1327#1328#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="525">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ModeTset.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="726">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="15" selection-start-line="15" selection-end-line="20" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1311#4397#0" expanded="true" />
+                <element signature="e#4396#4397#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java">
+        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="348">
+              <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/dev_pool">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/server79/ServerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -191,7 +161,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="198">
               <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -255,8 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/Monitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/background/Dev.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/Pdp.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" />
@@ -306,6 +274,8 @@
         <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/DbTcpTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ModeTset.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" />
       </list>
     </option>
   </component>
@@ -435,6 +405,63 @@
               <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="instrument" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redisSave" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tcp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -448,8 +475,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,6 +648,7 @@
       <workItem from="1578879377481" duration="861000" />
       <workItem from="1578963940087" duration="18911000" />
       <workItem from="1579050534937" duration="22619000" />
+      <workItem from="1579137374055" duration="3300000" />
     </task>
     <task id="LOCAL-00001" summary="丢包率较高">
       <created>1571016582644</created>
@@ -685,11 +713,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578028978669</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add mybatis sql setting.Transfer web http server to tcp server">
+      <created>1579137481007</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579137481007</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add mybatis sql setting.Transfer web http server to tcp server">
+      <created>1579144272742</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579144272742</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410533000" />
+    <option name="totallyTimeSpent" value="413833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,9 +744,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84477377" visible="true" weight="0.11685215" />
-      <window_info id="Structure" order="1" sideWeight="0.15522622" side_tool="true" visible="true" weight="0.11685215" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8439938" visible="true" weight="0.11764706" />
+      <window_info id="Structure" order="1" sideWeight="0.15600625" side_tool="true" visible="true" weight="0.11764706" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -731,7 +774,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21661367" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.10373609" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.011923688" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -809,76 +852,14 @@
     <MESSAGE value="add redis save" />
     <MESSAGE value="add log4j2" />
     <MESSAGE value="Use mysql to store user daily flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use mysql to store user daily flow" />
+    <MESSAGE value="Add mybatis sql setting.Transfer web http server to tcp server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add mybatis sql setting.Transfer web http server to tcp server" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.49/fastjson-1.2.49-sources.jar!/com/alibaba/fastjson/JSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="304" column="23" lean-forward="true" selection-start-line="304" selection-start-column="23" selection-end-line="304" selection-end-column="23" />
-          <folding>
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="2651" column="26" lean-forward="true" selection-start-line="2651" selection-start-column="26" selection-end-line="2651" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/UserServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/sun/nio/ch/Net.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="475" selection-start-line="475" selection-end-line="475" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/net/InetSocketAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="183" column="11" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
-          <folding>
-            <element signature="e#4746#4747#0" expanded="true" />
-            <element signature="e#4803#4804#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/ChannelInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -886,16 +867,6 @@
           <folding>
             <element signature="e#6735#6736#0" expanded="true" />
             <element signature="e#6795#6796#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/instrument/SqlSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1126,27 +1097,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/email_verify">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/user_dev">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/email_verify" />
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/user_dev" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2b839b9b-1bb6-4df0-ac01-287fb920f9b1/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/dev_pool">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/dev_pool" />
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/links_relationship" />
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/login_ticket" />
+    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/src_dev_config" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13167">
+          <caret line="421" column="60" selection-start-line="421" selection-start-column="60" selection-end-line="421" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,16 +1126,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DbTcpTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="264">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="198">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1177,56 +1153,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/links_relationship">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/login_ticket">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="421" column="60" selection-start-line="421" selection-start-column="60" selection-end-line="421" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b839b9b-1bb6-4df0-ac01-287fb920f9b1/schema/webrtclive/table/src_dev_config">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DbTcpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1328#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ModeTset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        <state relative-caret-position="176">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/instrument/SqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server79/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="15" selection-start-line="15" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1311#4397#0" expanded="true" />
+            <element signature="e#4396#4397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

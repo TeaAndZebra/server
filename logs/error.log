@@ -1,0 +1,41 @@
+2019.11.15 at 15:13:29 GMT+08:00 ERROR server79.DataBase 32 initial - com.mysql.cj.jdbc.Driver java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:332) ~[?:?]
+	at server79.DataBase.initial(DataBase.java:29) [finalServer-1.0-SNAPSHOT.jar:?]
+	at server79.DataBase.<init>(DataBase.java:21) [finalServer-1.0-SNAPSHOT.jar:?]
+	at server79.NonRegHandler.channelActive(NonRegHandler.java:29) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelActiveNow(ChannelHandlerInvokerUtil.java:38) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelActive(DefaultChannelHandlerInvoker.java:63) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelActive(DefaultChannelHandlerContext.java:292) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:816) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:474) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:318) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:353) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:794) [finalServer-1.0-SNAPSHOT.jar:?]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+
+2019.11.15 at 15:13:29 GMT+08:00 ERROR server79.DataBase 42 initial - No suitable driver found for jdbc:mysql://39.97.171.14:3306/webrtclive?user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8 java.sql.SQLException: No suitable driver found for jdbc:mysql://39.97.171.14:3306/webrtclive?user=root&password=123abc&useUnicode=true&characterEncoding=UTF-8
+	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
+	at server79.DataBase.initial(DataBase.java:38) [finalServer-1.0-SNAPSHOT.jar:?]
+	at server79.DataBase.<init>(DataBase.java:21) [finalServer-1.0-SNAPSHOT.jar:?]
+	at server79.NonRegHandler.channelActive(NonRegHandler.java:29) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelActiveNow(ChannelHandlerInvokerUtil.java:38) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelActive(DefaultChannelHandlerInvoker.java:63) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelActive(DefaultChannelHandlerContext.java:292) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:816) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$2.run(AbstractChannel.java:474) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:318) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:353) [finalServer-1.0-SNAPSHOT.jar:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:794) [finalServer-1.0-SNAPSHOT.jar:?]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+
+2020.01.15 at 09:39:48 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml
+2020.01.15 at 09:46:15 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml
+2020.01.15 at 09:48:07 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml
+2020.01.15 at 09:49:29 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml
+2020.01.15 at 09:55:27 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml
+2020.01.15 at 10:00:14 GMT+08:00 ERROR instrument.SqlSession 21 getSqlSessionFactory - conf/mybatis-config.xml

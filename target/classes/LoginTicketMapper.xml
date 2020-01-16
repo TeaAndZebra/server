@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--指定namespace为接口的全类名
+
+   Employee getEmpById(Integer id );-->
+<mapper namespace="Dao.LoginTicketDao">
+   <insert id="addTicket" parameterType="Dao.LoginTicketDao" useGeneratedKeys="true" keyProperty="user_id">
+       insert into login_ticket (user_id, expired, status, ticket)
+       values (#{userId},#{expired},#{status},#{ticket})
+   </insert>
+</mapper>
