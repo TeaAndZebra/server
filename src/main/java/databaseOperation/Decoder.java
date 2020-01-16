@@ -9,8 +9,5 @@ public class Decoder {
     public Decoder(JSONObject cmd){
         this.cmd = cmd;
     }
-    public String getMode() {
-        cmd.getString("mode");
-        return mode;
-    }
+
 }
