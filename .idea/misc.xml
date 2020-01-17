@@ -4,6 +4,10 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <type id="hibernate" />
   </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="D:/yueMing/JAVA/服务器相关" />
+    <option name="OTHER_OPTIONS" value="-encoding utf-8 -charset utf-8" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

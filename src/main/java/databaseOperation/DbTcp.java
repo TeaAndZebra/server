@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import tcp.TcpGetInfo;
 
 public class DbTcp {
-    private static Logger logger = LogManager.getLogger(TcpGetInfo.class.getName());
+    private static Logger logger = LogManager.getLogger(DbTcp.class.getName());
     private void startTcp(){
         EventLoopGroup acceptor = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();

@@ -16,7 +16,7 @@ import java.util.*;
 //implements UserServer之前
 public class UserServerImpl  implements UserServer{
     private SqlSessionFactory sqlSessionFactory = (new instrument.SqlSession()).getSqlSessionFactory();
-    private static Logger logger = LogManager.getLogger(NonRegHandler.class.getName());
+    private static Logger logger = LogManager.getLogger(UserServerImpl.class.getName());
 
     public UserServerImpl()  {
     }

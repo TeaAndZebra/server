@@ -4,8 +4,11 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ModeTset extends ChannelHandlerAdapter {
+    private static Logger logger = LogManager.getLogger(ModeTset.class.getName());
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         JSONObject jsonObject = new JSONObject();
@@ -40,9 +43,10 @@ public class ModeTset extends ChannelHandlerAdapter {
 ////        jsonObject.put("code_rate", "5555");
 
 
-        jsonObject.put("mode", "LogIn");
-        jsonObject.put("user_id", "592373157@qq.com");
-        jsonObject.put("password", "123456");
+//        jsonObject.put("mode", "LogIn");
+//        jsonObject.put("user_id", "592373157@qq.com");
+//        jsonObject.put("password", "123456");
+        jsonObject .put("is", "in");
 
         ByteBuf buf = Unpooled.buffer();
         String reply = jsonObject.toJSONString();
@@ -55,9 +59,13 @@ public class ModeTset extends ChannelHandlerAdapter {
         JSONObject jsonObject ;
         ByteBuf buf = (ByteBuf)msg;
         byte[] str = new byte[buf.readableBytes()];
-        ((ByteBuf) msg).getBytes(0,str,0,str.length);
-        jsonObject = JSONObject.parseObject(new String(str));
-        System.out.println(jsonObject);
+        (buf).getBytes(0,str,0,str.length);
+        try {
+            jsonObject = JSONObject.parseObject(new String(str));
+            logger.debug(jsonObject);
+        }catch (RuntimeException e){
+            logger.info("cannot cast to JSONObject",e);
+        }
     }
 
     @Override
