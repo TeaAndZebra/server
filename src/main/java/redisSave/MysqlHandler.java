@@ -99,6 +99,7 @@ public class MysqlHandler {
                 }
                 try {
                     connection.close();
+                    jedis.close();
                 } catch (SQLException e) {
 //                    e.printStackTrace();
                     logger.error(e.getMessage(), e);

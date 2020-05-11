@@ -81,7 +81,30 @@ public class ServerTest {
 //        System.out.println("start");
         logger.info("start");
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
-        Jedis jedis = new Jedis("localhost");
+        /**
+         * # 生成一个Jedis对象， 这个对象负责和指定Redis实例进行通信
+         * 1.Jedis jedis = new Jedis("127.0.0.1", 6379)
+         *2.Jedis(final String host, final int port, final int connectionTimeout, final int soTimeout)
+         *
+         * 推荐
+         * Jedis jedis = null;
+         * try {
+         * jedis = new Jedis("127.0.0.1", 6379);
+         * jedis.get("hello");
+         * } catch (Exception e) {
+         * logger.error(e.getMessage(),e);
+         * } finally {
+         * if (jedis != null) {
+         * jedis.close();
+         * }
+         * }
+         * **/
+        Jedis jedis=null;
+        try {
+            jedis = new Jedis("127.0.0.1",6379);
+        }catch (Exception e){
+            logger.error(e.getMessage(), e);
+        }
         service.scheduleAtFixedRate(new RedisHandler(jedis), 0,15, TimeUnit.SECONDS);
         new MysqlHandler().insertData();
         Thread thread = new Thread(new Monitor());

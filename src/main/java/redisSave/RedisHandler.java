@@ -13,7 +13,7 @@ import java.util.Map;
  * redisSave.MysqlHandler
  * 每天0点在mysql数据库中插入item（一天的流量），并清空redis数据库流量
  * **/
-public class RedisHandler implements Runnable {
+public class RedisHandler implements Runnable{
     private Jedis jedis;
     public RedisHandler(Jedis jedis){
         this.jedis = jedis;
@@ -22,6 +22,10 @@ public class RedisHandler implements Runnable {
     @Override
     public void run() {
        //System.out.println(System.currentTimeMillis()+"  run ");
+
+        /**
+         * 多次获取并设置是否能改为mget mset，节省时间
+         * */
         for (Map.Entry<PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()){
             Pdp pdp = entry.getValue();
           //  System.out.println(pdp+" "+pdp.getPdpSocket().getPdpAdd()+" : "+pdp.getPdpSocket().getPdpPort()+"  ,time is "+System.currentTimeMillis()+" num is  "+pdp.getBitsOfDatagram());
