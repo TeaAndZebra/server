@@ -1,4 +1,4 @@
-package server79;
+package forwardService.reg;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -6,6 +6,8 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import forwardService.*;
+import forwardService.dataConvertion.DataChange;
 
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -19,7 +21,7 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
         logger.error(cause.getMessage(),cause);
     }
     private int ipPort;
-    RegHandler(int ipPort){
+    public RegHandler(int ipPort){
         this.ipPort = ipPort;
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         service.scheduleAtFixedRate(new calSpeed(),0,10,TimeUnit.SECONDS);
@@ -83,34 +85,34 @@ public class RegHandler extends SimpleChannelInboundHandler<DatagramPacket> {
         byte pdpPort =  buf.getByte(6);
         PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
 
-     //   Pdp pdp = new Pdp(pdpSocket);//和SharedTranMap.pdpSocketPdpMap中存的不是同一个pdp，
+     //   User pdp = new User(pdpSocket);//和SharedTranMap.pdpSocketPdpMap中存的不是同一个pdp，
         if(SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
-            Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            User user = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
             //System.out.println("success  " +buf.getByte(0)+"  "+buf.getByte(1));
             if(fByte==(byte)0x55){
                 logger.debug(" reg operation");
-                RegImpl reg = SharedTranMap.regImplWithObject.get(pdp);
+                RegImpl reg = SharedTranMap.regImplWithObject.get(user);
              //   System.out.println("reg is  "+reg);
                //注册时在map中存入对象及该用户RegImpl
                 if(reg!=null) {
                     switch (sByte) {
                         case (byte) 0x00:
-                            reg.sinRoute(ctx, msg, pdp);
+                            reg.sinRoute(ctx, msg, user);
                             break;
                         case (byte) 0x01:
-                            reg.multiRoute(ctx, msg, pdp);
+                            reg.multiRoute(ctx, msg, user);
                             break;
                         case (byte) 0x03:
                             reg.reflect(ctx, msg);
                             break;
                         case (byte) 0x04:
-                            reg.getNumOfUser(ctx, msg,pdp);
+                            reg.getNumOfUser(ctx, msg, user);
                             break;
                         case (byte) 0x05:
-                            reg.getBitsOfUser(ctx, msg,pdp);
+                            reg.getBitsOfUser(ctx, msg, user);
                             break;
                         case (byte) 0x06:
-                            reg.getSpeedOfUser(ctx, msg,pdp);
+                            reg.getSpeedOfUser(ctx, msg, user);
                             break;
                     }
                 }

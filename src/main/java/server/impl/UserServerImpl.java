@@ -10,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import server.UserServer;
-import server79.NonRegHandler;
 
 import java.util.*;
 //implements UserServer之前

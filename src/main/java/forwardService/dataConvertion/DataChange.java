@@ -1,6 +1,4 @@
-package server79;
-
-import io.netty.buffer.ByteBuf;
+package forwardService.dataConvertion;
 
 public class DataChange {
     public static  byte[] IntToBytes(int data){
@@ -28,7 +26,7 @@ public class DataChange {
         }
         return a;
     }
-    static int[] IntToHex(int i) {
+    public static int[] IntToHex(int i) {
         int lowByte;
         int highByte;
         lowByte = i&0xff;
@@ -37,7 +35,7 @@ public class DataChange {
         //System.out.println(lowByte+"低位"+highByte);
         return HexByte;
     }
-    static byte[] longToBytes(long i){
+    public static byte[] longToBytes(long i){
         byte[] a = new byte[8];
         for(int x = 0;x<8;x++){
             int offset = 64-(x+1)*8;

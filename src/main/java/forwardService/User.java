@@ -1,4 +1,4 @@
-package server79;
+package forwardService;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.util.concurrent.ScheduledFuture;
 
-public class Pdp implements Serializable {
+public class User implements Serializable {
     private PdpSocket pdpSocket;
     private long bitsOfDatagram; //接收到的bit数
     private long numOfDatagram;  //接收到的包数
@@ -22,7 +22,7 @@ public class Pdp implements Serializable {
     private ScheduledFuture calSpeedFuture;
     private ScheduledFuture timer;
     private Double currentFlow;
-    public Pdp(PdpSocket pdpSocket){
+    public User(PdpSocket pdpSocket){
         this.pdpSocket = pdpSocket;
     }
     @Override
@@ -155,7 +155,7 @@ public class Pdp implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Pdp other = (Pdp) obj;
+        User other = (User) obj;
         if (!pdpSocket.equals(other.pdpSocket) )
             return false;
         return true;

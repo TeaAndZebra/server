@@ -1,10 +1,9 @@
-package server79;
+package forwardService;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class PdpSocket implements Serializable {
-    private int pdpAdd; //ip地址
+    private int pdpAdd; //pdp地址
     private byte pdpPort; //端口
 
     public PdpSocket(int pdpAdd, byte pdpPort){

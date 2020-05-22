@@ -4,8 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisConnectionException;
-import redis.clients.jedis.exceptions.JedisException;
-import server79.*;
+import forwardService.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +13,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.*;
 /**
- * redisSave.RedisHandler
+ *
  * 每15s在redis数据库中存入当前数据流量
  * redisSave.MysqlHandler
  * 每天0点在mysql数据库中插入item（一天的流量），并清空redis数据库流量
@@ -65,10 +64,10 @@ public class MysqlHandler {
                     logger.error(e.getMessage(), e);
                 }
 
-                for(Map.Entry< PdpSocket, Pdp> entry : SharedTranMap.pdpSocketPdpMap.entrySet()) {
-                    Pdp pdp = entry.getValue();
-                    Double flowD = jedis.zscore("UserFlow", pdp.toString());
-                    logger.debug("[{}] previous user flow is [{}]",pdp.toString(),flowD);
+                for(Map.Entry< PdpSocket, User> entry : SharedTranMap.pdpSocketPdpMap.entrySet()) {
+                    User user = entry.getValue();
+                    Double flowD = jedis.zscore("UserFlow", user.toString());
+                    logger.debug("[{}] previous user flow is [{}]", user.toString(),flowD);
                     Long flow = flowD != null ? flowD.longValue() : null;
                     if (flow != null && flow != 0) {
                         SimpleDateFormat sdf = new SimpleDateFormat();// 格式化时间
@@ -79,11 +78,11 @@ public class MysqlHandler {
 //                    System.out.println("time is : " + time+" now"); // 输出已经格式化的现在时间（24小时制）
                         try {
                             String sql = "INSERT INTO user_daily_flow(user,flow,time) " +
-                                    "VALUES ('" + pdp.toString() + "','" + flow + "','" + time + "')";
+                                    "VALUES ('" + user.toString() + "','" + flow + "','" + time + "')";
                             statement.execute(sql);
                             /**redis 清0*/
                             try {
-                                jedis.zadd("UserFlow", 0, pdp.toString());
+                                jedis.zadd("UserFlow", 0, user.toString());
                             }catch (JedisConnectionException e){
                                 logger.error(e.getMessage(), e);
                             }

@@ -10,7 +10,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import server.impl.UserServerImpl;
-import server79.NonRegHandler;
 
 import java.io.IOException;
 import java.util.ArrayList;

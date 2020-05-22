@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import server79.NonRegHandler;
+import forwardService.nonreg.NonRegHandler;
 
 import java.io.IOException;
 import java.io.InputStream;

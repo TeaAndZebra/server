@@ -1,7 +1,6 @@
-package server79;
+package forwardService.nonreg;
 
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.socket.DatagramPacket;
 
 public interface NonReg {
     void parseId(ChannelHandlerContext ctx) throws Exception;

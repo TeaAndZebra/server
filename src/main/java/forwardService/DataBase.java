@@ -1,13 +1,10 @@
-package server79;
+package forwardService;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
 import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Set;
 
 public class DataBase {
    private Connection connection = null;
@@ -42,7 +39,7 @@ public class DataBase {
            logger.error(e.getMessage(),e);
        }
    }
-    protected int getUserAdd(String user_id){
+    public int getUserAdd(String user_id){
 
         int userAdd=0;
         try{
@@ -71,7 +68,7 @@ public class DataBase {
         return userAdd;
 
     }
-    protected boolean containPdpAdd(int pdpAddInt) {
+    public boolean containPdpAdd(int pdpAddInt) {
         boolean contain = false;
         try {
 

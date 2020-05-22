@@ -1,7 +1,6 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import redis.clients.jedis.Jedis;
-import server79.DataBase;
+import forwardService.DataBase;
 
 import java.sql.*;
 

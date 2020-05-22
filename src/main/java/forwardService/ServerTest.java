@@ -1,5 +1,6 @@
-package server79;
+package forwardService;
 
+import redisSave.RedisService;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -10,14 +11,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 import redisSave.MysqlHandler;
-import redisSave.RedisHandler;
+import forwardService.nonreg.NonRegHandler;
+import forwardService.reg.RegHandler;
 
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class ServerTest {
-    static RegHandler b,c,d;
+    public static RegHandler b,c,d;
     private static Logger logger = LogManager.getLogger(ServerTest.class.getName());
     private void run() throws Exception {
         EventLoopGroup group = new NioEventLoopGroup(5);
@@ -80,6 +82,9 @@ public class ServerTest {
 
 //        System.out.println("start");
         logger.info("start");
+        /**
+         * 核数有什么意义？？？
+         * */
         ScheduledExecutorService service = new ScheduledThreadPoolExecutor(2);
         /**
          * # 生成一个Jedis对象， 这个对象负责和指定Redis实例进行通信
@@ -105,10 +110,11 @@ public class ServerTest {
         }catch (Exception e){
             logger.error(e.getMessage(), e);
         }
-        service.scheduleAtFixedRate(new RedisHandler(jedis), 0,15, TimeUnit.SECONDS);
+        service.scheduleAtFixedRate(new RedisService(jedis), 0,15, TimeUnit.SECONDS);
         new MysqlHandler().insertData();
-        Thread thread = new Thread(new Monitor());
-        thread.start();
+//        将redis Handler和monitor合并为RedisService
+
+//        thread.start();
         new ServerTest().run();
 
 

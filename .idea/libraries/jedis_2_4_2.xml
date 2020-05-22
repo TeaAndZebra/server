@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/../jedis-2.4.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

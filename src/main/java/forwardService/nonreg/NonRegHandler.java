@@ -1,4 +1,4 @@
-package server79;
+package forwardService.nonreg;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -7,6 +7,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import forwardService.dataConvertion.DataChange;
+import forwardService.reg.RegImpl;
+import forwardService.*;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -153,43 +156,43 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         echo[1] = (byte) 0x03;
 
         /**新建对象*/
-        Pdp pdp;
+        User user;
         PdpSocket pdpSocket = new PdpSocket(pdpAddInt, pdpPort);
         /**
          * 由pdpSocketPdpMap是否存在对应pdpSocket判断*/
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
             logger.info("[{}] repeat register",pdpAddInt);
-            pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
-            ipPort = pdp.getIpPort();
+            user = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            ipPort = user.getIpPort();
             // System.out.println("分配ip端口为：" + echoPort);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
             dateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
-            pdp.setLogInTime(dateFormat.format(new Date()) + "repeat register");
-            pdp.setLogOffTime("");
-            pdp.setCtx(ctx);
-            pdp.setIpAdd(msg.sender());
+            user.setLogInTime(dateFormat.format(new Date()) + "repeat register");
+            user.setLogOffTime("");
+            user.setCtx(ctx);
+            user.setIpAdd(msg.sender());
             echo[2] = (byte) 0;//成功
             echo[3] = (byte) ((ipPort >> 8) & 0xff);//port高8位
             echo[4] = (byte) (ipPort & 0xff);//port低八位
-            pdp.getTimer().cancel(false);
+            user.getTimer().cancel(false);
 
-            ScheduledFuture future = myService.schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
-           // ScheduledFuture future = ctx.executor().schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
-            pdp.setTimer(future);
+            ScheduledFuture future = myService.schedule(new Remover(user), 15, TimeUnit.SECONDS);
+           // ScheduledFuture future = ctx.executor().schedule(new Remover(user), 15, TimeUnit.SECONDS);
+            user.setTimer(future);
         } else {
             /** System.out.println("初次注册");*/
             if (!dataBase.getConnection().isValid(2)) {
                 dataBase = new DataBase();
             }
             if (dataBase.containPdpAdd(pdpAddInt)) {
-                pdp = new Pdp(pdpSocket);
-                logger.info("[{}] first register success",pdp.toString());
+                user = new User(pdpSocket);
+                logger.info("[{}] first register success", user.toString());
 
                 /**将add及对应port存入map*/
                 SharedTranMap.pdpPortMap.put(pdpAddInt, pdpPort);
                 /**存入对象及其socket(Socket,Object)*/
-                SharedTranMap.pdpSocketPdpMap.put(pdpSocket, pdp);
-             //   SharedTranMap.finalPdpSocketPdpMap.put(pdpSocket, pdp);
+                SharedTranMap.pdpSocketPdpMap.put(pdpSocket, user);
+             //   SharedTranMap.finalPdpSocketPdpMap.put(pdpSocket, user);
                 /**计算*/
                 long rateB = ServerTest.b.getSpeedOfPort();
                 long rateC = ServerTest.c.getSpeedOfPort();
@@ -208,35 +211,35 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                 echo[3] = (byte) ((ipPort >> 8) & 0xff);//port高8位
                 echo[4] = (byte) (ipPort & 0xff);//port低八位
                 /**配置pdp属性参数*/
-                SharedTranMap.regImplWithObject.put(pdp, reg);
-                pdp.setCtx(ctx);
-                pdp.setIpAdd(msg.sender());
-                pdp.setIpPort(ipPort);
+                SharedTranMap.regImplWithObject.put(user, reg);
+                user.setCtx(ctx);
+                user.setIpAdd(msg.sender());
+                user.setIpPort(ipPort);
                 Date date = new Date();
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 dateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
-                pdp.setLogInTime(dateFormat.format(date) + "first register");
-                pdp.setLogOffTime("");
-                ScheduledFuture future = myService.schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
+                user.setLogInTime(dateFormat.format(date) + "first register");
+                user.setLogOffTime("");
+                ScheduledFuture future = myService.schedule(new Remover(user), 15, TimeUnit.SECONDS);
 
-                //  ScheduledFuture future = ctx.executor().schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
-                pdp.setTimer(future);
+                //  ScheduledFuture future = ctx.executor().schedule(new Remover(user), 15, TimeUnit.SECONDS);
+                user.setTimer(future);
                 ScheduledExecutorService service = new ScheduledThreadPoolExecutor(1);
                 ScheduledFuture calSpeedFuture = service.scheduleAtFixedRate(new Runnable() {
                     @Override
                     public void run() {
-   //                   if(pdp!=null) {
-                        pdp.setSpeedOfDatagram(pdp.getTestOfSpeed() /10);
-                        pdp.setTestOfSpeed(0);
+   //                   if(user!=null) {
+                        user.setSpeedOfDatagram(user.getTestOfSpeed() /10);
+                        user.setTestOfSpeed(0);
   //                      }
                     }
                 }, 0, 10, TimeUnit.SECONDS);
-                pdp.setCalSpeedFuture(calSpeedFuture);
+                user.setCalSpeedFuture(calSpeedFuture);
 
             } else {
                 /**错误码*/
 //                System.out.println(pdpAddInt+" first register error");
-                logger.info("invalid pdp [{}] in first register ",pdpAddInt);
+                logger.info("invalid user [{}] in first register ",pdpAddInt);
                 echo[2] = (byte) -1;
             }
         }
@@ -258,18 +261,18 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
 
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
             //System.out.println(pdpAddInt + "update IP");
-            Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
-            logger.debug("[{}] update ip",pdp.toString());
+            User user = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            logger.debug("[{}] update ip", user.toString());
 
-            pdp.setIpAdd(msg.sender());
-            pdp.setCtx(ctx);
+            user.setIpAdd(msg.sender());
+            user.setCtx(ctx);
             //重启定时器
-            pdp.getTimer().cancel(false);
+            user.getTimer().cancel(false);
          //   ctx.executor().shutdownGracefully();
-            ScheduledFuture future = myService.schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
+            ScheduledFuture future = myService.schedule(new Remover(user), 15, TimeUnit.SECONDS);
 
-          //  ScheduledFuture future = ctx.executor().schedule(new Remover(pdp), 15, TimeUnit.SECONDS);
-            pdp.setTimer(future);
+          //  ScheduledFuture future = ctx.executor().schedule(new Remover(user), 15, TimeUnit.SECONDS);
+            user.setTimer(future);
         } else {
 //            System.out.println("address error when updating ip");
             logger.info("address error when updating ip");
@@ -298,16 +301,16 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
 
             SharedTranMap.pdpPortMap.remove(pdpAddInt, pdpPort);
 
-            Pdp pdp = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
-            logger.debug("[{}] cancel",pdp.toString());
-            SharedTranMap.pdpSocketPdpMap.remove(pdpSocket,pdp );
-            SharedTranMap.regImplWithObject.remove(pdp);
+            User user = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
+            logger.debug("[{}] cancel", user.toString());
+            SharedTranMap.pdpSocketPdpMap.remove(pdpSocket, user);
+            SharedTranMap.regImplWithObject.remove(user);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             dateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
-            //   pdp.setState(-1);
-            pdp.getTimer().cancel(false);
-            pdp.setLogOffTime(dateFormat.format(new Date()));
-            pdp.getCalSpeedFuture().cancel(false);
+            //   user.setState(-1);
+            user.getTimer().cancel(false);
+            user.setLogOffTime(dateFormat.format(new Date()));
+            user.getCalSpeedFuture().cancel(false);
         }
     }
 }
