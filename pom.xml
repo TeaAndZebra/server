@@ -7,6 +7,7 @@
     <groupId>finalServer</groupId>
     <artifactId>finalServer</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 <!--    pom.xml文件中增加maven编译的jdk版本设置，maven.compiler.source和maven.compiler.target，另外java.version最好也加上-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -101,6 +102,16 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
             <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
         </dependency>
     </dependencies>
 

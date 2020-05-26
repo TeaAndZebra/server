@@ -90,3 +90,33 @@
 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:794) [netty-all-5.0.0.Alpha1.jar:5.0.0.Alpha1]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
 
+2020.05.26 at 13:53:01 GMT+08:00 ERROR redisSave.RedisService 66 updateInRedis - null java.lang.NullPointerException: null
+	at redisSave.RedisService.updateInRedis(RedisService.java:50) [classes/:?]
+	at redisSave.RedisService.run(RedisService.java:25) [classes/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+
+2020.05.26 at 13:53:16 GMT+08:00 ERROR redisSave.RedisService 66 updateInRedis - null java.lang.NullPointerException: null
+	at redisSave.RedisService.updateInRedis(RedisService.java:50) [classes/:?]
+	at redisSave.RedisService.run(RedisService.java:25) [classes/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+
+2020.05.26 at 13:53:31 GMT+08:00 ERROR redisSave.RedisService 66 updateInRedis - null java.lang.NullPointerException: null
+	at redisSave.RedisService.updateInRedis(RedisService.java:50) [classes/:?]
+	at redisSave.RedisService.run(RedisService.java:25) [classes/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+

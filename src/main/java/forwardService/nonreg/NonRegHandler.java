@@ -7,7 +7,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import forwardService.dataConvertion.DataChange;
+import forwardService.utils.DataChange;
 import forwardService.reg.RegImpl;
 import forwardService.*;
 

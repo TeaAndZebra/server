@@ -45,7 +45,11 @@ public class RedisService implements Runnable{
        * @Date: 2020/5/11
        */
     public boolean updateInRedis(ArrayList<User> userArrayList){
+        this.userArrayList=userArrayList;
         String userRedisKey=null;
+        if(userArrayList==null){
+            return true;
+        }
         try {
             for(User user:userArrayList){
                 userRedisKey = "user:info:" +user.getPdpSocket();//pdp地址及pdp端口

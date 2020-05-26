@@ -7,7 +7,7 @@ import io.netty.channel.socket.DatagramPacket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import forwardService.*;
-import forwardService.dataConvertion.DataChange;
+import forwardService.utils.DataChange;
 
 public class RegImpl implements Reg {
     private int port;
