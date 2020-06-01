@@ -18,7 +18,11 @@ public class Remover implements Runnable {
         if (SharedTranMap.pdpSocketPdpMap.containsValue(user)) {
                 logger.info("[{}] is removed", user.toString());
 //                System.out.println( user.getPdpSocket().getPdpAdd()+" :  "+user.getPdpSocket().getPdpPort()+" is removed");
-                SharedTranMap.pdpPortMap.remove(user.getPdpSocket().getPdpAdd(), user.getPdpSocket().getPdpPort());
+            /**
+             * 2020/6/1 避免对pdpPortMap并发操作
+             * */
+               // SharedTranMap.pdpPortMap.remove(user.getPdpSocket().getPdpAdd(), user.getPdpSocket().getPdpPort());
+            SharedTranMap.modPdpPortMap("remove",user.getPdpSocket().getPdpAdd(), user.getPdpSocket().getPdpPort());
                 SharedTranMap.pdpSocketPdpMap.remove(user.getPdpSocket(), user);
                 SharedTranMap.regImplWithObject.remove(user);
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");

@@ -188,8 +188,11 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
                 user = new User(pdpSocket);
                 logger.info("[{}] first register success", user.toString());
 
-                /**将add及对应port存入map*/
-                SharedTranMap.pdpPortMap.put(pdpAddInt, pdpPort);
+                /**2020/6/1 避免并发对pdpPortMap操作
+                 *
+                 * 将add及对应port存入map*/
+                SharedTranMap.modPdpPortMap("put", pdpAddInt, pdpPort);
+             //   SharedTranMap.pdpPortMap.put(pdpAddInt, pdpPort);
                 /**存入对象及其socket(Socket,Object)*/
                 SharedTranMap.pdpSocketPdpMap.put(pdpSocket, user);
              //   SharedTranMap.finalPdpSocketPdpMap.put(pdpSocket, user);
@@ -299,8 +302,11 @@ public class NonRegHandler extends SimpleChannelInboundHandler<DatagramPacket> i
         if (SharedTranMap.pdpSocketPdpMap.containsKey(pdpSocket)) {
 //            System.out.println(pdpAddInt + "cancel");
 
-            SharedTranMap.pdpPortMap.remove(pdpAddInt, pdpPort);
-
+            /**
+             * 2020/6/1 避免对pdpPortMap并发操作
+             * */
+            //SharedTranMap.pdpPortMap.remove(pdpAddInt, pdpPort);
+            SharedTranMap.modPdpPortMap("remove",pdpAddInt, pdpPort);
             User user = SharedTranMap.pdpSocketPdpMap.get(pdpSocket);
             logger.debug("[{}] cancel", user.toString());
             SharedTranMap.pdpSocketPdpMap.remove(pdpSocket, user);
