@@ -24,6 +24,7 @@ hs_err_pid*
 
 # exclude idea files
 .idea
+.idea/workspace.xml
 *.iml
 bin/codecov.sh
 bin/deploy.sh

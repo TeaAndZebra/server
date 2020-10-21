@@ -10,108 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/MysqlHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/MysqlQuartzJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/RedisInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/IdParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RedisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/finalServer_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalServer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/web.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/LinksRelationshipDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/LoginTicketDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/UserDeviceMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DbTcp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/Decoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/Device.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/LinksRelationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/ByteBufTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ByteBufTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/PdpSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/PdpSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/Remover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/Remover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonReg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/Reg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/display.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/display.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/log.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/log.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/person.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/person.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/html/userinfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/userinfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/UserServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DevConfigDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LinksRelationshipDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginTicketMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDeviceMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DbTcpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DbTcpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/DevConfigDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/LinksRelationshipDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/LoginTicketDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/UserDeviceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DevConfigDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LinksRelationshipDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoginTicketMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserDeviceMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbTcp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbTcp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/Decoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/Device.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DeviceSetting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/LinksRelationship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/LoginTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/instrument/SqlSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/instrument/SqlSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/UserServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/impl/UserServerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tcp/GetInfoHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tcp/GetInfoHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/finalServer-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-finalServer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-finalServer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Database.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -245,11 +144,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6732">
-              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="495">
+              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -431,9 +327,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-101" />
-    <option name="y" value="47" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="225" />
+    <option name="y" value="71" />
     <option name="width" value="1774" />
     <option name="height" value="1317" />
   </component>
@@ -453,6 +349,11 @@
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
@@ -765,7 +666,7 @@
       <workItem from="1602553164018" duration="2501000" />
       <workItem from="1603070237666" duration="20898000" />
       <workItem from="1603156831347" duration="13596000" />
-      <workItem from="1603242506325" duration="1091000" />
+      <workItem from="1603242506325" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="丢包率较高">
       <created>1571016582644</created>
@@ -881,7 +782,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="640724000" />
+    <option name="totallyTimeSpent" value="641944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,10 +794,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-101" y="47" width="1774" height="1317" extended-state="0" />
+    <frame x="225" y="71" width="1774" height="1317" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6102941" visible="true" weight="0.22287048" />
-      <window_info id="Structure" order="1" sideWeight="0.3897059" side_tool="true" visible="true" weight="0.22287048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82843137" visible="true" weight="0.22287048" />
+      <window_info id="Structure" order="1" sideWeight="0.17156863" side_tool="true" visible="true" weight="0.22287048" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -911,10 +812,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49841017" weight="0.32917318" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49562797" weight="0.27847114" />
+      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49533257" weight="0.2781065" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48716453" weight="0.22485207" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.11201867" side_tool="true" visible="true" weight="0.31022823" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50466746" side_tool="true" visible="true" weight="0.31022823" />
       <window_info anchor="bottom" id="SVN Repositories" order="12" weight="0.3299532" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3299532" />
@@ -1394,11 +1295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6732">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="495">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
