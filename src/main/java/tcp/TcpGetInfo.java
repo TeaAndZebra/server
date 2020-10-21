@@ -39,6 +39,7 @@ public class TcpGetInfo {
     }
 
     public static void main(String[] args) {
+        logger.info("TcpGetInfo start");
         new TcpGetInfo().startTcp();
     }
 }

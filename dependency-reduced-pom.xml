@@ -11,6 +11,7 @@
         <version>3.2.1</version>
         <executions>
           <execution>
+            <id>shade-my-jar</id>
             <phase>package</phase>
             <goals>
               <goal>shade</goal>
@@ -18,7 +19,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>forwardService.ServerTest</mainClass>
+                  <mainClass>tcp.TcpGetInfo</mainClass>
                 </transformer>
               </transformers>
             </configuration>

@@ -1,6 +1,6 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import forwardService.DataBase;
+import forwardService.utils.DataBase;
 
 import java.sql.*;
 

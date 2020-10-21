@@ -5,13 +5,12 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import forwardService.nonreg.NonRegHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 public class SqlSession {
-    private static Logger logger = LogManager.getLogger(NonRegHandler.class.getName());
+    private static Logger logger = LogManager.getLogger(SqlSession.class.getName());
     public SqlSessionFactory getSqlSessionFactory() {
         String resource = "mybatis-config.xml";
         InputStream inputStream = null;

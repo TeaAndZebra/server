@@ -12,6 +12,7 @@ public class GetInfoHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
       //  System.out.println("连上");
+
         ByteBuf instr = (ByteBuf)msg;
         byte[] str = new byte[instr.readableBytes()];
         instr.getBytes(0,str,0,instr.readableBytes());

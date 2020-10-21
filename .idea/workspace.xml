@@ -10,59 +10,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8404dac-74ce-4ff0-ae52-cbcf10f31ba6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/MysqlHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/MysqlQuartzJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/RedisInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/IdParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/finalServer_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalServer.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/web.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/dataConvertion/DataChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/DataChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redisSave/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/finalServer.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/background/Dev.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/background/DevInfoHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseOperation/DbHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DevConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DeviceSetting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseOperation/DeviceSetting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/LinksRelationshipDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/LoginTicketDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/UserDeviceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DbTcp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/Decoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/LinksRelationship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseOperation/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/ByteBufTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ByteBufTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/utils/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/PdpSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/PdpSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/Remover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/Remover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonReg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/Reg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/display.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/log.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/log.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/person.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/person.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/userinfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/html/userinfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/redisSave/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataPersistence/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/UserServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DevConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LinksRelationshipDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginTicketMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDeviceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DbTcpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DbTcpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/DevConfigDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/LinksRelationshipDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/LoginTicketDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/UserDeviceMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DevConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LinksRelationshipDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginTicketMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserDeviceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbTcp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DbTcp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/Decoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/DeviceSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/LinksRelationship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/LoginTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseOperation/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbconfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/instrument/SqlSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/instrument/SqlSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/RedisHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/impl/UserServerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/impl/UserServerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ByteBufTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/DataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/DataChange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Monitor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Monitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonReg.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/NonRegHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Pdp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/PdpSocket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Reg.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler$calSpeed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/RegImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/Remover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/ServerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server79/SharedTranMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/finalServer-1.0-SNAPSHOT-shaded.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/finalServer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/finalServer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redisSave/MysqlHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/UserServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/impl/UserServerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tcp/GetInfoHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tcp/GetInfoHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tcp/TcpGetInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/finalServer-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-finalServer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-finalServer-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ModeTset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ModeTset.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,102 +144,121 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1193">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="1221">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29172">
+              <caret line="962" column="19" selection-start-line="962" selection-start-column="19" selection-end-line="962" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3596#4158#0" />
+                <element signature="e#42647#42648#0" expanded="true" />
+                <element signature="e#42686#42687#0" expanded="true" />
+                <element signature="e#44314#44315#0" expanded="true" />
+                <element signature="e#44362#44363#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="2046">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
             </state>
           </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisService.java">
+        <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/ResultSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="6963">
+              <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dataPersistence/RedisService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1353">
+              <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#updateInRedis#0;n#RedisService#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            <state relative-caret-position="2244">
+              <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <folding>
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="true" />
+                <element signature="e#2615#2616#0" expanded="true" />
+                <element signature="e#2649#2650#0" expanded="true" />
+                <element signature="e#2800#2801#0" expanded="true" />
+                <element signature="e#2838#2839#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16-sources.jar!/com/mysql/cj/jdbc/exceptions/SQLError.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="2904">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3478">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server/UserServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="1815">
+              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#SharedTranMap#0" />
+                <element signature="n#!!doc;n#pdpPortMap#0;n#SharedTranMap#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="6732">
+              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
               <folding>
-                <element signature="docComment;class#DbHandler#0" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/PdpSocket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -201,8 +269,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -218,10 +286,7 @@
       <find>logger.</find>
       <find>password</find>
       <find>user</find>
-      <find>delayed</find>
-      <find>override</find>
-      <find>get</find>
-      <find>getDelay</find>
+      <find>AbstractUnsafe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,7 +299,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="redisStoreUserInfo" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <excluded-from-favorite>
@@ -254,57 +319,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/server/UserServerInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/UserWithDevConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/LoginTicketMapper" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/LoginTicketDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server/UserServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/UserWithDevConfigDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dbconfig.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/UserWithDevConfigDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/LinksRelationshipDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/LinksRelationshipDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/Device.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/UserDeviceMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/UserDeviceMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/LoginTicketMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/DevConfigDao.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/DbTcpTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java" />
         <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DbTcp.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/ModeTset.java" />
-        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/Monitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/background/RedisPdpInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/background/RedisUserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/background/Dev.java" />
-        <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nonreg/NonRegHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/NonRegHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/Remover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server79/SharedTranMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/server79/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/RegImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/reg/RegImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/DataChange.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server79/dataConvertion/DataChange.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forwardService/PdpSocket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forwardService/Monitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java" />
         <option value="$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/DbTcpTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RedisTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/redisSave/RedisService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/MysqlQuartzJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataPersistence/RedisInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataPersistence/MysqlHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/dbconfig.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/reg/Reg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonReg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/reg/Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/IdParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/handler/Service.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ByteBufTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/Remover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/utils/IdParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/instrument/SqlSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/utils/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/handler/Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataPersistence/RedisService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -366,11 +431,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="190" />
-    <option name="y" value="234" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-101" />
+    <option name="y" value="47" />
     <option name="width" value="1774" />
-    <option name="height" value="1204" />
+    <option name="height" value="1317" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -380,149 +445,78 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="databaseOperation" type="462c0819:PsiDirectoryNode" />
+              <item name="dataPersistence" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="forwardService" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="forwardService" type="462c0819:PsiDirectoryNode" />
-              <item name="nonreg" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="forwardService" type="462c0819:PsiDirectoryNode" />
-              <item name="reg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="forwardService" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="instrument" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redisSave" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finalServer" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finalServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -541,33 +535,36 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.34637514" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Downloads\finalServer\src\test" />
       <recent name="C:\Users\admin\Downloads\finalServer\target\classes" />
       <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\html" />
       <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\server" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="forwardService.utils" />
       <recent name="databaseOperation" />
       <recent name="server.impl" />
       <recent name="server" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Downloads\finalServer" />
       <recent name="C:\Users\admin\Downloads\finalServer\src\main\resources" />
       <recent name="C:\Users\admin\Downloads\finalServer\target\classes\server79" />
       <recent name="C:\Users\admin\Downloads\finalServer\target\classes" />
       <recent name="C:\Users\admin\Downloads\finalServer\target\classes\tcp" />
-      <recent name="C:\Users\admin\Downloads\modServer82\src\main\java\background" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -582,10 +579,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServerTest">
+  <component name="RunManager" selected="Application.ServerTest (1)">
+    <configuration name="ByteBufTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ByteBufTest" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="forwardService.handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RSAUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="forwardService.utils.RSAUtils" />
-      <module name="finalServer" />
+      <module name="server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="forwardService.utils.*" />
@@ -596,12 +606,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ServerTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="forwardService.ServerTest" />
-      <module name="finalServer" />
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nonreg.*" />
+          <option name="PATTERN" value="forwardService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -609,12 +619,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TcpGetInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tcp.TcpGetInfo" />
-      <module name="modServer82" />
+    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="entity.ServerTest" />
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tcp.*" />
+          <option name="PATTERN" value="forwardService.handler.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -622,40 +632,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mapTest" />
-      <module name="modServer82" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="toString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.toString" />
-      <module name="modServer82" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="RedisTest.testRedisHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedisTest" />
+      <option name="METHOD_NAME" value="testRedisHash" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.mapTest" />
-      <item itemvalue="Application.toString" />
+      <item itemvalue="Application.ByteBufTest" />
       <item itemvalue="Application.ServerTest" />
-      <item itemvalue="Application.TcpGetInfo" />
       <item itemvalue="Application.RSAUtils" />
+      <item itemvalue="Application.ServerTest (1)" />
+      <item itemvalue="JUnit.RedisTest.testRedisHash" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ServerTest" />
+        <item itemvalue="Application.ServerTest (1)" />
         <item itemvalue="Application.RSAUtils" />
-        <item itemvalue="Application.TcpGetInfo" />
-        <item itemvalue="Application.toString" />
-        <item itemvalue="Application.mapTest" />
+        <item itemvalue="Application.ServerTest" />
+        <item itemvalue="JUnit.RedisTest.testRedisHash" />
+        <item itemvalue="Application.ByteBufTest" />
       </list>
     </recent_temporary>
   </component>
@@ -709,23 +709,63 @@
       <workItem from="1579050534937" duration="22619000" />
       <workItem from="1579137374055" duration="6709000" />
       <workItem from="1579223982275" duration="10019000" />
-      <workItem from="1588907035385" duration="1985000" />
-      <workItem from="1588986604173" duration="4220000" />
-      <workItem from="1589159323649" duration="9936000" />
-      <workItem from="1589246019025" duration="18196000" />
-      <workItem from="1589277143857" duration="513000" />
-      <workItem from="1589331908244" duration="212000" />
-      <workItem from="1589338048242" duration="9000" />
-      <workItem from="1589354822792" duration="1659000" />
-      <workItem from="1589425384244" duration="3175000" />
-      <workItem from="1589505320712" duration="1739000" />
-      <workItem from="1589763915523" duration="2947000" />
-      <workItem from="1589849984483" duration="2267000" />
-      <workItem from="1589936192351" duration="599000" />
-      <workItem from="1590023581801" duration="1426000" />
-      <workItem from="1590112017056" duration="3999000" />
-      <workItem from="1590368456925" duration="3958000" />
-      <workItem from="1590455383750" duration="2825000" />
+      <workItem from="1590541614136" duration="19261000" />
+      <workItem from="1590628464693" duration="13396000" />
+      <workItem from="1590715751176" duration="599000" />
+      <workItem from="1590973410659" duration="1309000" />
+      <workItem from="1590978885039" duration="4254000" />
+      <workItem from="1591059602617" duration="599000" />
+      <workItem from="1591145827249" duration="5531000" />
+      <workItem from="1591233136821" duration="1536000" />
+      <workItem from="1591318948025" duration="1887000" />
+      <workItem from="1591578476444" duration="8685000" />
+      <workItem from="1591685286328" duration="777000" />
+      <workItem from="1591925050383" duration="1198000" />
+      <workItem from="1592183152621" duration="598000" />
+      <workItem from="1592208930049" duration="598000" />
+      <workItem from="1592276242392" duration="599000" />
+      <workItem from="1592288607868" duration="599000" />
+      <workItem from="1592473367815" duration="9000" />
+      <workItem from="1592789219307" duration="1436000" />
+      <workItem from="1592984840954" duration="614000" />
+      <workItem from="1593569842249" duration="3234000" />
+      <workItem from="1593593521036" duration="611000" />
+      <workItem from="1593652333780" duration="211000" />
+      <workItem from="1594603068394" duration="640000" />
+      <workItem from="1594948425228" duration="6299000" />
+      <workItem from="1595206931109" duration="9583000" />
+      <workItem from="1595302126388" duration="1663000" />
+      <workItem from="1595380424241" duration="18136000" />
+      <workItem from="1595834047383" duration="8236000" />
+      <workItem from="1595898562410" duration="4469000" />
+      <workItem from="1595985156455" duration="5213000" />
+      <workItem from="1596078225091" duration="595000" />
+      <workItem from="1596157745090" duration="1193000" />
+      <workItem from="1596417433377" duration="8426000" />
+      <workItem from="1596443396266" duration="1540000" />
+      <workItem from="1596447276492" duration="983000" />
+      <workItem from="1596504536544" duration="5240000" />
+      <workItem from="1596519244381" duration="4545000" />
+      <workItem from="1596596565020" duration="468000" />
+      <workItem from="1596676667228" duration="2398000" />
+      <workItem from="1596764412647" duration="2512000" />
+      <workItem from="1597194568854" duration="1185000" />
+      <workItem from="1597305054484" duration="597000" />
+      <workItem from="1597375321015" duration="1008000" />
+      <workItem from="1597627231878" duration="599000" />
+      <workItem from="1597714420826" duration="1196000" />
+      <workItem from="1597799406959" duration="1196000" />
+      <workItem from="1597885859398" duration="1596000" />
+      <workItem from="1597979906269" duration="1198000" />
+      <workItem from="1599027733636" duration="62000" />
+      <workItem from="1599440803657" duration="6176000" />
+      <workItem from="1599554842153" duration="2230000" />
+      <workItem from="1599615686144" duration="619000" />
+      <workItem from="1600998701444" duration="1228000" />
+      <workItem from="1602553164018" duration="2501000" />
+      <workItem from="1603070237666" duration="20898000" />
+      <workItem from="1603156831347" duration="13596000" />
+      <workItem from="1603242506325" duration="1091000" />
     </task>
     <task id="LOCAL-00001" summary="丢包率较高">
       <created>1571016582644</created>
@@ -804,25 +844,44 @@
       <option name="project" value="LOCAL" />
       <updated>1579144272742</updated>
     </task>
-    <task id="LOCAL-00012" summary="Add mybatis sql setting.Transfer web http server to tcp server">
-      <created>1589185135957</created>
+    <task id="LOCAL-00012" summary="deal with PdpPortMap unsafe feature">
+      <created>1590979096307</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1589185135957</updated>
+      <updated>1590979096307</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add mybatis sql setting.Transfer web http server to tcp server">
-      <created>1590112576265</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1590112576265</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 42m 10s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 42m 24s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 45m 30s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 46m 07s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 46m 26s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 49m 39s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 50m 11s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTest_testRedisHash - 2020.07.20 at 09h 51m 26s.xml">
+      <configuration name="RedisTest.testRedisHash" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="489513000" />
+    <option name="totallyTimeSpent" value="640724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,11 +893,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="-101" y="47" width="1774" height="1317" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8355049" visible="true" weight="0.1859375" />
-      <window_info id="Structure" order="1" sideWeight="0.16449511" side_tool="true" visible="true" weight="0.1859375" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6102941" visible="true" weight="0.22287048" />
+      <window_info id="Structure" order="1" sideWeight="0.3897059" side_tool="true" visible="true" weight="0.22287048" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -846,28 +904,29 @@
       <window_info id="Favorites" order="6" sideWeight="0.47214484" side_tool="true" weight="0.2" />
       <window_info id="Persistence" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49880764" weight="0.16692668" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6996094" visible="true" weight="0.058282208" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49921876" weight="0.1411043" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49682036" weight="0.32605305" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.88798136" weight="0.31022823" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4996904" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49841017" weight="0.32917318" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49403816" weight="0.13962558" />
+      <window_info anchor="bottom" content_ui="combo" x="881" y="533" width="936" height="300" id="Version Control" order="8" sideWeight="0.49562797" weight="0.27847114" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48867187" weight="0.09969325" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.30039063" side_tool="true" visible="true" weight="0.058282208" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48716453" weight="0.22485207" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.11201867" side_tool="true" visible="true" weight="0.31022823" />
       <window_info anchor="bottom" id="SVN Repositories" order="12" weight="0.3299532" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3299532" />
-      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.4890625" weight="0.2101227" />
+      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.48251194" weight="0.1349454" />
+      <window_info anchor="bottom" id="JProfiler" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.14228936" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.11983471" />
+      <window_info anchor="right" id="Database" order="4" weight="0.011923688" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.140625" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.011923688" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
@@ -944,369 +1003,401 @@
     <MESSAGE value="add log4j2" />
     <MESSAGE value="Use mysql to store user daily flow" />
     <MESSAGE value="Add mybatis sql setting.Transfer web http server to tcp server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add mybatis sql setting.Transfer web http server to tcp server" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java</url>
-          <line>104</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="deal with PdpPortMap unsafe feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="deal with PdpPortMap unsafe feature" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5478">
-          <caret line="173" column="45" selection-start-line="173" selection-start-column="45" selection-end-line="173" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/background/DevInfoHandler.java" />
     <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/jedis/Jedis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102300">
-          <caret line="3129" column="17" selection-start-line="3129" selection-start-column="17" selection-end-line="3129" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/jedis/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23859">
-          <caret line="831" column="14" selection-start-line="831" selection-start-column="14" selection-end-line="831" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/jedis/BinaryClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29601">
-          <caret line="1155" column="13" selection-start-line="1155" selection-start-column="13" selection-end-line="1155" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/jedis/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2079">
-          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/jedis/Protocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-2.4.2-sources.jar!/redis/clients/util/SafeEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/DataChange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/background/Dev.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DevConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/Decoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/MysqlHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/UserDeviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        <state relative-caret-position="102201">
+          <caret line="3126" column="18" selection-start-line="3126" selection-start-column="18" selection-end-line="3126" selection-end-column="18" />
           <folding>
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1839#1840#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/PdpSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/LoginTicketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/DevConfigDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbTcp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/Monitor.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/org/apache/commons/codec/binary/Base64.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6633">
-          <caret line="223" column="25" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/security/KeyPairGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3399">
-          <caret line="134" column="22" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4554">
-          <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/LinksRelationship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/LoginTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/reg/Reg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/reg/RegHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" selection-start-line="23" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/ByteBufTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="990">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/css.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/display.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/jquery.min.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dbconfig.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="99">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/socket/DatagramPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/EventLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="2148" column="26" selection-start-line="2148" selection-start-column="26" selection-end-line="2148" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/reflect/Constructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0-sources.jar!/org/quartz/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7161">
+          <caret line="240" column="9" selection-start-line="240" selection-start-column="9" selection-end-line="240" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ScheduledExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4290">
+          <caret line="163" column="30" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="204" column="18" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#2009#2035#0" expanded="true" />
+            <element signature="e#6735#6736#0" expanded="true" />
+            <element signature="e#6795#6796#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/log.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/log.html">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/nio/NioEventLoopGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="1419">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#7;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#2182#2183#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/person.json">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/MultithreadEventLoopGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
+        <state relative-caret-position="924">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/html/userinfo.json">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/util/concurrent/MultithreadEventExecutorGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
+        <state relative-caret-position="1155">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redisSave/RedisService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/DefaultChannelProgressivePromise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="396">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2186#2187#0" expanded="true" />
+            <element signature="e#2216#2217#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/ChannelFuture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        <state relative-caret-position="4983">
+          <caret line="170" column="12" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/DefaultChannelPromise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding>
+            <element signature="e#2076#2077#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/channel/ChannelInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/bootstrap/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="e#9929#9930#0" expanded="true" />
+            <element signature="e#9971#9972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetInfoHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="462">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tcp/GetMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3478">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="-3927">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/UserServer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha1/netty-all-5.0.0.Alpha1-sources.jar!/io/netty/buffer/ByteBuf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="374">
+          <caret line="531" column="26" selection-start-line="531" selection-start-column="26" selection-end-line="531" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonRegHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/reg/RegImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/reg/Reg.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/nonreg/NonReg.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tcp/TcpGetInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/RSAUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/ByteBufTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="17" column="95" lean-forward="true" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164472">
+          <caret line="5448" column="30" selection-start-line="5448" selection-start-column="30" selection-end-line="5448" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataPersistence/RedisInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/DataChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/Remover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataPersistence/MysqlQuartzJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2037">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/impl/UserServerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/IdParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="429">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataPersistence/MysqlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/instrument/SqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/ServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1193">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="33">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1221">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29172">
+          <caret line="962" column="19" selection-start-line="962" selection-start-column="19" selection-end-line="962" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3596#4158#0" />
+            <element signature="e#42647#42648#0" expanded="true" />
+            <element signature="e#42686#42687#0" expanded="true" />
+            <element signature="e#44314#44315#0" expanded="true" />
+            <element signature="e#44362#44363#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DeviceSetting.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/utils/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="2046">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/databaseOperation/DbHandler.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/ResultSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="6963">
+          <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataPersistence/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
           <folding>
-            <element signature="docComment;class#DbHandler#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#updateInRedis#0;n#RedisService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding>
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+            <element signature="e#2649#2650#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16-sources.jar!/com/mysql/cj/jdbc/exceptions/SQLError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2904">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/SharedTranMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#SharedTranMap#0" />
+            <element signature="n#!!doc;n#pdpPortMap#0;n#SharedTranMap#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/PdpSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forwardService/handler/ServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6732">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1318,10 +1409,10 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="jpa-descriptors" />
               <type id="library" />
-              <type id="javaee-facet-resources" />
               <type id="artifact" />
+              <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
           <last-edited>finalServer:jar</last-edited>
@@ -1372,12 +1463,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>finalServer</last-edited>
+          <last-edited>server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.34637514" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1385,7 +1475,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Hibernate 5.4.9-5.4.9</last-edited>
+          <last-edited>jedis-2.4.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
